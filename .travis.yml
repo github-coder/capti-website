@@ -1,16 +1,17 @@
 language: node_js
 node_js:
-  - "7"
-
+- '7'
 install:
-  - yarn install
-script: 
-  - gulp svg
-  - gulp build__static
-
+- yarn install
+script:
+- gulp svg
+- gulp build__static
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token:  c103adf5c71302fd6ec77c2ae9c0382489a7685c
+  github_token: $GITHUB_TOKEN
   on:
     branch: master
+env:
+  global:
+    secure: eU7OljARvBtntiU6XhWVZAMgR7g0059MK+2kQbB0yMq/ujy+0QsXtT9WUa/sAM7diiLRLhxQAbiIszEct2zkDHbEdkzT1aCVj6kGNSbsAvsKxsf3W53/jcAoFqeWWp8rP3z0rWB5B9mZy4tIDyF9Pmzq9KEf071xi7WlkrGauOpGQ3x2cEusDQycT8KQwkQlt/AV9MkCzr8rB7A1sU1S+4Pc4XNB4vTJAGTMDgB1z2MfkBaCA3mg+gKGdnmvxFa+yG4UoIN/4kI7ntNDQ7TRqMVomVttHNvkPTYZFi8UtiPSfy4CKIiHHEOFfl7bvzt/+ND7s9bgV2oEEmcdKzCLV4BD0nwvxHoJPnMpOsqgq6xUXRtSmJKL45bEAIkjTf0gov+JeRoiqYakrcRj8lctkkTF/YedsNQiMk02h0F0ipmiyG8jDtOhLSY/hXLWgA1ZVREQJ3bYxga3A3CQ8LZt+98nFw1CMYKxCDwoD1YBeEt3N804DTpAlM7o5tMF+6CIDnvADyuyCm7SLsZqPxLEAt28SewarlfP2q4OLa8+WPsiOzUgFEy79ymO07xi9Jj8QplwseReuhjIAsx2xMmbHWdGc8KN3YX0QRxAPye8lOUP4zJFJKfp0zCGMnDQNMxZAcuP948qu4X5EkbBdhd9XnEc7CYzGm2sxqLdERutTVs=
