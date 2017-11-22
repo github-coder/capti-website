@@ -9,7 +9,7 @@ branches:
   - master
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_722ef1dc8c96_key -iv $encrypted_722ef1dc8c96_iv -in publish-key.enc -out publish-key -d
+- openssl aes-256-cbc -K HP@DESKTOP-ND9U86A$encrypted_722ef1dc8c96_key -iv HP@DESKTOP-ND9U86A$encrypted_722ef1dc8c96_iv -in publish-key.enc -out ~/.ssh/publish-key -d
 - chmod u=rw,og= ~/.ssh/publish-key
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
