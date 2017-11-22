@@ -11,8 +11,6 @@ cp -R docs $HOME/docs
 
 #go to home and setup git
 cd $HOME
-git config --global user.email "sdhnik@gmail.com"
-git config --global user.name "sdhnik@gmail.com"
 
 #using token clone gh-pages branch
 git clone --quiet --branch=gh-pages https://github.com/github-coder/capti-website.git gh-pages > /dev/null
