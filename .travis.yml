@@ -8,9 +8,3 @@ script:
   - gulp svg
   - gulp build__static
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: c2607093c6461cdb6f68102224b179b41e993718
-  on:
-    branch: master

@@ -35,7 +35,7 @@ gulp.task('css__static', function () {
         errLogToConsole: true
     }))
     .pipe(autoprefixer('last 4 version'))
-    .pipe(gulp.dest('deploy/css'));
+    .pipe(gulp.dest('docs/css'));
 });
 
 gulp.task('html', function () {
@@ -56,7 +56,7 @@ gulp.task('html__static', function () {
            linkPath: '/capti-homepage/'
         }
     }))
-    .pipe(gulp.dest('deploy'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('browser-sync', function() {
@@ -102,7 +102,7 @@ gulp.task('svg', function () {
 gulp.task('copy', function () {
     gulp.src(['server/img/**/*', 'server/css/**/*', 'server/js/**/*'], {
         base: 'server'
-    }).pipe(gulp.dest('deploy'));
+    }).pipe(gulp.dest('docs'));
 });
 
 gulp.task('build', ['svg', 'html', 'css']);
