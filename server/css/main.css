@@ -1,0 +1,771 @@
+.capti--icon-1:before, .capti--icon-2:before, .capti--icon-3:before, .capti--icon-4:before, .teachers .capti--icon-1:before, .k12-admin .capti--icon-1:before, .collage-faculty .capti--icon-1:before, .readers .capti--icon-1:before {
+  display: inline-block;
+  background-image: url("/img/sprite.svg");
+  background-size: 39.5em 36em; }
+
+@media (min-width: 1200px), (min-width: 992px), (min-width: 768px) {
+  header .container {
+    width: auto;
+    padding-right: 30px; } }
+
+#navigation-footer footer .col-xs-12 {
+  padding: 0 15px; }
+
+#navigation-footer footer ul {
+  margin: 40px 0 15px;
+  text-align: left; }
+  #navigation-footer footer ul li {
+    padding: 0 15px 0 0;
+    margin-right: -4px; }
+    #navigation-footer footer ul li a {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #1290cc; }
+    #navigation-footer footer ul li + li {
+      padding: 0 15px 0 14px; }
+  #navigation-footer footer ul.footer-social-links {
+    text-align: right; }
+    #navigation-footer footer ul.footer-social-links li {
+      width: 50px;
+      text-align: center;
+      padding: 0;
+      vertical-align: top; }
+      #navigation-footer footer ul.footer-social-links li a {
+        font-size: 1.5rem;
+        color: #1290cc; }
+        #navigation-footer footer ul.footer-social-links li a:hover, #navigation-footer footer ul.footer-social-links li a:focus {
+          color: #107fb5; }
+      #navigation-footer footer ul.footer-social-links li + li {
+        border: 0; }
+
+#navigation-footer footer p {
+  text-align: left;
+  font-size: 1rem;
+  color: #999;
+  margin: 35px 0 40px; }
+
+.capti--button a {
+  display: inline-block;
+  border: 2px solid #2280c7;
+  border-radius: 23px;
+  padding: 10px 30px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+  transition: background-color .3s ease, color .3s ease; }
+  .capti--button a:hover, .capti--button a:focus {
+    background-color: #2280c7;
+    color: #fff;
+    text-decoration: none; }
+    .capti--button a:hover path, .capti--button a:focus path {
+      fill: #fff; }
+
+.capti--button__arrow {
+  display: inline-block;
+  vertical-align: top;
+  height: 24px;
+  width: 17px;
+  margin-left: 10px; }
+  .capti--button__arrow path {
+    fill: #2280c7;
+    transition: fill .3s ease; }
+
+.capti--slider {
+  position: relative;
+  height: 700px; }
+  .capti--slider__slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .capti--slider__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 25%; }
+    .capti--slider__overlay polygon {
+      fill: #fff;
+      opacity: .8; }
+  .capti--slider .container {
+    position: relative;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+  .capti--slider__devices {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: calc(50% - 50vw); }
+    .capti--slider__devices div {
+      position: absolute;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    .capti--slider__devices-ipad {
+      background-image: url(../img/ipad.png);
+      background-size: 410px 529px;
+      height: 529px;
+      width: 410px; }
+    .capti--slider__devices-laptop {
+      background-image: url(../img/laptop.png);
+      background-size: 843px 560px;
+      height: 560px;
+      width: 843px; }
+    .capti--slider__devices-iphone {
+      background-image: url(../img/iphone.png);
+      background-size: 290px 483px;
+      height: 483px;
+      width: 290px; }
+  .capti--slider__content {
+    padding-left: 50%; }
+  .capti--slider__logo {
+    border-bottom: 5px solid rgba(18, 144, 204, 0.3);
+    margin-bottom: 15px; }
+    .capti--slider__logo span {
+      display: inline-block;
+      vertical-align: top; }
+  .capti--slider__title {
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+    .capti--slider__title strong {
+      font-weight: 500; }
+  .capti--slider__subtitle {
+    font-size: 1.1875rem;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 480px;
+    width: 300px;
+    margin-bottom: 40px; }
+
+.capti--icon {
+  height: 70px;
+  width: 70px;
+  margin: 15px auto 20px;
+  position: relative; }
+  .capti--icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-size: 16px; }
+  .capti--icon-1:before {
+    width: 3.8125em;
+    height: 3.8125em;
+    background-position: -31.0625em -27.5625em; }
+  .capti--icon-2:before {
+    width: 6.01875em;
+    height: 4.3125em;
+    background-position: -17.8125em -17.8125em;
+    left: -15px;
+    top: -15px; }
+  .capti--icon-3:before {
+    width: 3.8125em;
+    height: 3.8125em;
+    background-position: -0.3125em -0.3125em; }
+  .capti--icon-4:before {
+    width: 3.8125em;
+    height: 3.8125em;
+    background-position: -9.0625em -9.0625em; }
+
+.capti--awards {
+  background-color: #f8fafb;
+  padding: 50px 0; }
+  .capti--awards__animation {
+    position: relative;
+    overflow: hidden; }
+    .capti--awards__animation:before, .capti--awards__animation:after {
+      content: '';
+      width: 50px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to right, #f8fafb 0%, rgba(248, 250, 251, 0) 100%);
+      z-index: 2; }
+    .capti--awards__animation:after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(to right, rgba(248, 250, 251, 0) 0%, #f8fafb 100%); }
+  .capti--awards__list {
+    position: relative;
+    z-index: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 1200px;
+    animation: awards_run 80s linear infinite; }
+    .capti--awards__list li {
+      min-width: 200px;
+      width: 200px;
+      padding: 0 20px;
+      opacity: .8;
+      transition: opacity .3s ease; }
+      .capti--awards__list li img {
+        height: auto;
+        width: 100%; }
+
+.capti--seo {
+  position: relative;
+  padding: 60px 0 120px;
+  background: url(../img/waves.svg) center 105% repeat-x;
+  overflow: hidden; }
+  .capti--seo .container {
+    position: relative; }
+    .capti--seo .container > [class*='col-sm'] + [class*='col-sm'] {
+      margin-top: 60px; }
+  .capti--seo h1, .capti--seo h2 {
+    display: inline-block;
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #1290cc;
+    padding-bottom: 12px; }
+  .capti--seo ul {
+    padding-left: 40px; }
+    .capti--seo ul li {
+      position: relative;
+      font-size: 1.1875rem;
+      font-weight: 400;
+      margin-bottom: 7px; }
+      .capti--seo ul li:before {
+        content: '';
+        width: 15px;
+        height: 14.31px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -30px;
+        font-size: 16px;
+        background: url(../img/icons/arrow.svg) center center no-repeat;
+        background-size: 15px, 14.31px;
+        margin: auto; }
+  .capti--seo p {
+    line-height: 28px; }
+  .capti--seo__with-img {
+    padding: 120px 0;
+    background: url(../img/explore-back.jpg) center -10vh no-repeat;
+    background-size: cover;
+    color: #fff; }
+    .capti--seo__with-img:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to right, rgba(14, 83, 117, 0.6) 0%, transparent 100%); }
+    .capti--seo__with-img h1, .capti--seo__with-img h2 {
+      display: block;
+      padding: 0;
+      margin-bottom: 40px;
+      border-bottom: 0; }
+
+.capti--photo__row {
+  height: 450px; }
+  .capti--photo__row .col-sm-4 {
+    height: 100%;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.capti--photo__fly {
+  position: absolute;
+  right: 0;
+  height: 400px;
+  width: 600px; }
+  .capti--photo__fly-photo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 10px 45px rgba(109, 112, 113, 0.25); }
+  .capti--photo__fly-icon {
+    display: inline-block;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
+    opacity: .2; }
+    .capti--photo__fly-icon-1 {
+      left: 0;
+      right: 50px;
+      top: -140px;
+      height: 150px;
+      width: 150px;
+      background-image: url(../img/icons/icon-1.svg);
+      background-size: 150px 150px; }
+    .capti--photo__fly-icon-2 {
+      bottom: 0;
+      left: -200px;
+      height: 175px;
+      width: 175px;
+      background-image: url(../img/icons/icon-2.svg);
+      background-size: 175px 175px; }
+    .capti--photo__fly-icon-3 {
+      left: 200px;
+      right: 0;
+      bottom: -190px;
+      opacity: .3;
+      height: 170px;
+      width: 170px;
+      background-image: url(../img/icons/icon-3.svg);
+      background-size: 170px 170px; }
+
+.capti--map {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  width: 100%; }
+  .capti--map #map {
+    height: 100%;
+    width: 100%; }
+  .capti--map .leaflet-marker-pane {
+    z-index: 700 !important; }
+  .capti--map .leaflet-control-attribution {
+    display: none; }
+
+.capti--call_to_action {
+  position: relative;
+  background-color: #2c5464;
+  overflow: hidden;
+  padding: 45px 0; }
+  .capti--call_to_action:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/waves.svg) center center no-repeat;
+    background-size: 110% auto;
+    opacity: .05;
+    z-index: 0; }
+  .capti--call_to_action .container {
+    position: relative;
+    z-index: 1; }
+  .capti--call_to_action__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; }
+  .capti--call_to_action__text {
+    font-weight: bold;
+    color: #fff; }
+  .capti--call_to_action__suptitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px; }
+  .capti--call_to_action__title {
+    font-size: 1.5rem;
+    line-height: 120%;
+    margin-bottom: 15px; }
+  .capti--call_to_action__singup, .capti--call_to_action__getquote {
+    display: inline-block;
+    border-radius: 23px;
+    padding: 10px 30px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    transition: background-color .3s ease, color .3s ease; }
+    .capti--call_to_action__singup:hover, .capti--call_to_action__singup:focus, .capti--call_to_action__getquote:hover, .capti--call_to_action__getquote:focus {
+      text-decoration: none; }
+  .capti--call_to_action__singup {
+    border: 2px solid #2280c7;
+    background-color: #2280c7;
+    color: #fff;
+    transition: background-color .3s ease, border-color .3s ease; }
+    .capti--call_to_action__singup .capti--button__arrow {
+      display: inline-block;
+      vertical-align: top;
+      height: 24px;
+      width: 17px;
+      margin-left: 10px; }
+      .capti--call_to_action__singup .capti--button__arrow path {
+        fill: #fff;
+        transition: fill .3s ease; }
+    .capti--call_to_action__singup:hover, .capti--call_to_action__singup:focus {
+      background-color: #1e72b1;
+      border: 2px solid #1e72b1;
+      color: #fff; }
+      .capti--call_to_action__singup:hover .capti--button__arrow path, .capti--call_to_action__singup:focus .capti--button__arrow path {
+        fill: #fff; }
+  .capti--call_to_action__getquote {
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 10px; }
+    .capti--call_to_action__getquote:hover, .capti--call_to_action__getquote:focus {
+      background-color: #fff;
+      color: #2280c7; }
+    .capti--call_to_action__getquote i {
+      margin-right: 5px; }
+
+@keyframes awards_run {
+  0% {
+    left: 0; }
+  100% {
+    left: -1200px; } }
+
+.home .capti--slider__slide {
+  background: url(../img/background/capti--home__background.jpg) center -10vh no-repeat;
+  background-size: cover; }
+
+.home .capti--slider__overlay {
+  height: 100%;
+  width: 53%; }
+  .home .capti--slider__overlay polygon {
+    fill: #fff;
+    opacity: .8; }
+
+.home .capti--slider__devices-ipad {
+  right: 50%;
+  top: 2%; }
+
+.home .capti--slider__devices-laptop {
+  right: -1%;
+  top: 15%; }
+
+.home .capti--slider__devices-iphone {
+  right: 5%;
+  bottom: 2%; }
+
+.home .capti--slider__content {
+  padding-left: 58%; }
+
+.home .capti--slider__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: none;
+  color: #333;
+  margin-bottom: 30px;
+  margin-top: -60px; }
+  .home .capti--slider__title strong {
+    font-weight: 500; }
+
+.home .capti--icon {
+  margin: 15px auto 20px; }
+
+.home .capti--links {
+  background: url(../img/waves.svg) center 105% repeat-x;
+  z-index: 1; }
+  .home .capti--links__list {
+    position: relative;
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: -50px auto 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .home .capti--links__list a {
+      display: block;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      border-top: 5px solid #1290cc;
+      max-width: 300px;
+      min-height: 250px;
+      padding: 30px;
+      color: #666; }
+      .home .capti--links__list a:hover, .home .capti--links__list a:focus {
+        text-decoration: none; }
+        .home .capti--links__list a:hover .capti--links__arrow, .home .capti--links__list a:focus .capti--links__arrow {
+          width: 186px;
+          text-indent: 0;
+          border-color: #2280c7; }
+          .home .capti--links__list a:hover .capti--links__arrow:hover, .home .capti--links__list a:focus .capti--links__arrow:hover {
+            background-color: #2280c7;
+            color: #fff; }
+            .home .capti--links__list a:hover .capti--links__arrow:hover path, .home .capti--links__list a:focus .capti--links__arrow:hover path {
+              fill: #fff; }
+      .home .capti--links__list a span {
+        display: block;
+        text-align: center; }
+  .home .capti--links__title {
+    font-size: 1.375rem;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .home .capti--links__subtitle {
+    font-size: 1rem;
+    margin: 20px 0; }
+  .home .capti--links__arrow {
+    width: 30px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    padding: 10px 30px;
+    overflow: hidden;
+    text-indent: -112px;
+    font-weight: 400;
+    color: #2280c7;
+    white-space: nowrap;
+    margin: auto;
+    transition: width .3s ease, border-color .3s ease, text-indent .3s ease, background-color .3s ease; }
+    .home .capti--links__arrow svg {
+      display: inline-block;
+      vertical-align: top;
+      height: 24px;
+      width: 30px;
+      margin-left: 10px; }
+      .home .capti--links__arrow svg path {
+        fill: #2280c7;
+        transition: fill .3s ease; }
+
+.home .capti--call_to_action {
+  padding: 45px 0; }
+
+.teachers .capti--slider {
+  z-index: 2; }
+  .teachers .capti--slider__slide {
+    background: url(../img/background/capti--teacher__background.jpg) center -15vh no-repeat;
+    background-size: cover; }
+  .teachers .capti--slider__overlay {
+    right: -25%;
+    height: 100%;
+    width: 60%; }
+    .teachers .capti--slider__overlay polygon {
+      fill: #fff;
+      opacity: .8; }
+  .teachers .capti--slider .container {
+    max-width: none;
+    width: auto; }
+  .teachers .capti--slider__devices-laptop {
+    right: -12%;
+    bottom: -20%; }
+  .teachers .capti--slider__content {
+    padding-left: 75%; }
+
+.teachers .capti--icon {
+  margin: 0 0 7px; }
+  .teachers .capti--icon-1:before {
+    width: 3.8125em;
+    height: 3.8125em;
+    background-position: -35.4375em -31.9375em; }
+
+.teachers .capti--photo__fly {
+  top: 250px; }
+  .teachers .capti--photo__fly-photo {
+    background-image: url(../img/background/capti--teacher__background-fly.jpg); }
+
+.teachers .capti--photo__1 {
+  background-image: url(../img/background/capti--teacher__background-row-1.jpg); }
+
+.teachers .capti--photo__2 {
+  background-image: url(../img/background/capti--teacher__background-row-2.jpg); }
+
+.teachers .capti--photo__3 {
+  background-image: url(../img/background/capti--teacher__background-row-3.jpg); }
+
+.teachers .capti--call_to_action-top {
+  padding: 110px 0 45px; }
+  .teachers .capti--call_to_action-top:before {
+    background-position: center top; }
+  .teachers .capti--call_to_action-top .capti--call_to_action__container {
+    display: block; }
+  .teachers .capti--call_to_action-top .capti--call_to_action__text {
+    max-width: 980px;
+    margin: 0 auto 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 160%; }
+  .teachers .capti--call_to_action-top .capti--call_to_action__buttons {
+    text-align: center; }
+
+.k12-admin .capti--slider {
+  z-index: 2; }
+  .k12-admin .capti--slider__slide {
+    background: url(../img/background/capti--k12__background.jpg) center -10vh no-repeat;
+    background-size: cover; }
+  .k12-admin .capti--slider__overlay {
+    right: -25%;
+    height: 100%;
+    width: 60%; }
+    .k12-admin .capti--slider__overlay polygon {
+      fill: #fff;
+      opacity: .8; }
+  .k12-admin .capti--slider .container {
+    max-width: none;
+    width: auto; }
+  .k12-admin .capti--slider__devices-laptop {
+    left: calc(100% - 421px);
+    bottom: -20%; }
+  .k12-admin .capti--slider__content {
+    padding-left: 75%; }
+
+.k12-admin .capti--icon {
+  margin: 0 0 7px 15px; }
+  .k12-admin .capti--icon-1:before {
+    width: 6.01875em;
+    height: 4.3125em;
+    background-position: -24.4375em -22.6875em; }
+
+.k12-admin .capti--photo__fly {
+  top: 250px; }
+  .k12-admin .capti--photo__fly-photo {
+    background-image: url(../img/background/capti--k12__background-fly.jpg); }
+
+.k12-admin .capti--photo__1 {
+  background-image: url(../img/background/capti--teacher__background-row-1.jpg); }
+
+.k12-admin .capti--photo__2 {
+  background-image: url(../img/background/capti--teacher__background-row-2.jpg); }
+
+.k12-admin .capti--photo__3 {
+  background-image: url(../img/background/capti--teacher__background-row-3.jpg); }
+
+.k12-admin .capti--call_to_action-top {
+  padding: 110px 0 0;
+  overflow: visible; }
+  .k12-admin .capti--call_to_action-top:before {
+    background-position: center top; }
+  .k12-admin .capti--call_to_action-top .capti--call_to_action__container {
+    display: block; }
+  .k12-admin .capti--call_to_action-top .capti--call_to_action__text {
+    max-width: 980px;
+    margin: 0 auto 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 160%; }
+  .k12-admin .capti--call_to_action-top .capti--call_to_action__buttons {
+    text-align: center;
+    margin-bottom: -24px; }
+    .k12-admin .capti--call_to_action-top .capti--call_to_action__buttons p {
+      font-size: 1.375rem;
+      font-weight: bold;
+      line-height: 120%;
+      color: #fff;
+      margin-bottom: 30px; }
+
+.collage-faculty .capti--slider {
+  z-index: 2; }
+  .collage-faculty .capti--slider__slide {
+    background: url(../img/background/capti--collage__background.jpg) center top no-repeat;
+    background-size: cover; }
+  .collage-faculty .capti--slider__overlay {
+    right: -25%;
+    height: 100%;
+    width: 60%; }
+    .collage-faculty .capti--slider__overlay polygon {
+      fill: #fff;
+      opacity: .8; }
+  .collage-faculty .capti--slider .container {
+    max-width: none;
+    width: auto; }
+  .collage-faculty .capti--slider__devices-laptop {
+    right: -12%;
+    bottom: -20%; }
+  .collage-faculty .capti--slider__content {
+    padding-left: 75%; }
+
+.collage-faculty .capti--icon {
+  margin: 0 0 7px; }
+  .collage-faculty .capti--icon-1:before {
+    width: 3.8125em;
+    height: 3.8125em;
+    background-position: -4.6875em -4.6875em; }
+
+.collage-faculty .capti--photo__fly {
+  top: 250px; }
+  .collage-faculty .capti--photo__fly-photo {
+    background-image: url(../img/background/capti--collage__background-fly.jpg); }
+
+.collage-faculty .capti--photo__1 {
+  background-image: url(../img/background/capti--collage__background-row-1.jpg); }
+
+.collage-faculty .capti--photo__2 {
+  background-image: url(../img/background/capti--collage__background-row-2.jpg); }
+
+.collage-faculty .capti--photo__3 {
+  background-image: url(../img/background/capti--collage__background-row-3.jpg); }
+
+.collage-faculty .capti--call_to_action-top {
+  padding: 110px 0 0;
+  overflow: visible; }
+  .collage-faculty .capti--call_to_action-top:before {
+    background-position: center top; }
+  .collage-faculty .capti--call_to_action-top .capti--call_to_action__container {
+    display: block; }
+  .collage-faculty .capti--call_to_action-top .capti--call_to_action__text {
+    max-width: 980px;
+    margin: 0 auto 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 160%; }
+  .collage-faculty .capti--call_to_action-top .capti--call_to_action__buttons {
+    text-align: center;
+    margin-bottom: -24px; }
+    .collage-faculty .capti--call_to_action-top .capti--call_to_action__buttons p {
+      font-size: 1.375rem;
+      font-weight: bold;
+      line-height: 120%;
+      color: #fff;
+      margin-bottom: 30px; }
+
+.readers .capti--slider {
+  z-index: 2; }
+  .readers .capti--slider__slide {
+    background: url(../img/background/capti--readers__background.jpg) center -7vh no-repeat;
+    background-size: cover; }
+  .readers .capti--slider__overlay {
+    right: -15%;
+    height: 100%;
+    width: 60%; }
+    .readers .capti--slider__overlay polygon {
+      fill: #fff;
+      opacity: .8; }
+  .readers .capti--slider .container {
+    max-width: none;
+    width: auto; }
+  .readers .capti--slider__devices-ipad {
+    left: 80%;
+    top: 15%; }
+  .readers .capti--slider__devices-iphone {
+    left: 100%;
+    bottom: 2%; }
+  .readers .capti--slider__content {
+    padding-left: 73%; }
+
+.readers .capti--icon {
+  margin: 0 0 7px; }
+  .readers .capti--icon-1:before {
+    width: 3.8125em;
+    height: 3.8125em;
+    background-position: -13.4375em -13.4375em; }
+
+.readers .capti--photo__fly {
+  top: 250px; }
+  .readers .capti--photo__fly-photo {
+    background-image: url(../img/background/capti--readers__background-fly.jpg); }
+
+.readers .capti--call_to_action-top {
+  padding: 55px 0 65px; }
+  .readers .capti--call_to_action-top:before {
+    background-position: center bottom; }
+  .readers .capti--call_to_action-top .capti--call_to_action__container {
+    display: block; }
+  .readers .capti--call_to_action-top .capti--call_to_action__text {
+    max-width: 980px;
+    margin: 0 auto 40px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 160%; }
+  .readers .capti--call_to_action-top .capti--call_to_action__buttons {
+    text-align: center; }
