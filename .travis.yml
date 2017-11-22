@@ -1,17 +1,19 @@
 language: node_js
 node_js:
 - '7'
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
 install:
 - yarn install
 script:
 - gulp svg
 - gulp build__static
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
+after_success:
+- bash ./deploy.sh
 env:
   global:
-  - secure: hGp4ekYtFJ3T3QuXl+L5sUmxcB3QeqFKD9muAjiEGTYvexSeipvL47HEwig4w+tFuetWBhjzc2V/6QK5xpbCvQmW5DdD3TplraNK7OtaTsLTiwFu6olQP0C6n2RxZyaCSazIQ31Fd3/LXyvwq+hk7nO/Wkir8RLaX8HI1wD0utoV1s8FdavZP1n8xc+AkAgBjCLgySN7dT+F9XZExqAOsPLppvM4ehpNHJYrw+78QJ/hLpOMfkKDMQbJdqrsjMra107c5ViMiiEwqwldA1mk+Cx747yxkXUPsIYebLDqdUCl610B8PKH6EYwThV7Jw8YDMm4VOum7CTZT8PX6kREwUdGYyOryvqTntqmcrRYc+HtHWLFk9yw/fZnPMDJ5wx7d4qvPEsJMPSDVETQMFTOo5/9MJRgitPOMK5KU9JoRwlYRr1jhwjCg6m/N2Nyi41cs0I5jn2iL2CLF82xt/TUsa51EH+E41rBaUmFibrWT5zABIaJDCF5l8h02FNNPJjAUPLAhHTByXpYk6+zh4ZV8k/lRS/JFgQ+dShOIbvweVkaufEK4tolV4K8Tcd9YYPysvdCXQAxGPm1F83UuFDOJrcAxd9DWal0ePapiBM+Wdkj8a2Bhzaq7Wtbo8CYcHyuv1jcj0OnyVj/j8Jvrq5CbQ9HRh0/5IQl8QLIh7gphJo=
+    secure: ueS78dyJ+F59tpPZIrQUv/5iorAC26vYItdR6U01SlUzNm/iw5wfzbGauJvrGuKaurmRj9RGnlI8DFB7TerK5Hnlc6hzaT+Xlc/gNsvxvvvnLEoU0kgQhf+jNULwnDjPJsYMRESXSSr06TLQ3IEMMSVANBnKgbXZktK0J1XARZvEpfPZU5BaGgfGuCxujW7YPAKaFHg1rvI2jcXLp9h084thm179cSSGsX20k5aiVaz/v6i/g5DpNy3OJcsrDn8tUy7V4EwPoVxsBP+J3YgKraYeut5PAPf1aYsUbR4PqzJbBB6LjX9mDjtHCDJ+tsLx/RIRMz8SfP1oh3R6OAdlM4Hzf4b+S2vDnMTgf3+37TBx43dQhcxCq327FnkmNL4Lw6CyWsuW5sjtvQ66AIEQDTFHxqIW5Ad+/DRAirK2l6el50ml/nMg+xYTPgarJb6y1J5kvtj2c13RdVWrjxFSLydxIcwcfUVdkk6CTtLy/s9Y9FGvuygEVb8sy5YIcnNMPuB0gpS6ME1xo1CopgIRmDafVqvuziEf2Yn3d7IamGwfvB+fEwkXcvqkJLHsHyRnr5XoLtLFWmIvErjyLONYBSs1UjVeaiJ+TmPx6zCar6TuZ3XByrGM+s9gJtIZx0kRZ24LTVkIvzlbHaiKlc1Fip1aBbL4kapfN9406Xw6Q8A=
