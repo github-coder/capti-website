@@ -1,3 +1,9 @@
-# Capti Home Page #
+# Capti Website v.2 #
 
-Home page design
+Pages:
+
+- Home page
+- Teachers
+- K-12
+- Collage faculty
+- Readers
