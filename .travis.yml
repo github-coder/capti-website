@@ -7,13 +7,20 @@ cache:
 branches:
   only:
   - master
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_722ef1dc8c96_key -iv $encrypted_722ef1dc8c96_iv -in publish-key.enc -out publish-key -d
+- chmod u=rw,og= ~/.ssh/publish-key
+- echo "Host github.com" >> ~/.ssh/config
+- echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
+- git --version
+- git remote set-url origin git@github.com:github-coder/capti-website.git
+- git fetch origin -f gh-pages:gh-pages
+
 install:
 - yarn install
 script:
 - gulp svg
 - gulp build__static
 after_success:
-- bash ./deploy.sh
-env:
-  global:
-  - secure: euReTuLT3+hU7dJY521jMAUIzDJql9Bcghswz/ji7WISSM+i7hJ/+4oVNbO511WqrDITRZ+XInUWGv/anJsNLDlCmyey2EgeIHyGN9cH59yQ5yfvLS0H1gJCcbAnOwiUDxYxuBO2ndTBkq0C2Fm0Jl//jPTHq9LGUT7/H8EWq4IGCOrKhd8Zpn8ucth3X91fCZZIBQtJWZU5WZC6U9/lqZeweJ92xbC6faZB3QeaVVJYln2EY/BS4KJEBCFjtbh5wtXveX+j/HAEMXHFLU/Vluc85x8gnRNtcvRbBg5Z5skmlODvMN9ArYVB308QQwZbDabraM6+zTLlkRiBswD6l2YOcV9oFZtyV0ShD/4NMOFZZo1DG6SbrnCdM3fJlOrFVsC+XNYRZLuqu1GzcBAcf6yvfkWpkh9r6bvzpwRN0HFmb1AD3823/pVSWbk9oDNfO9+B0dhl9k8PEQ1eiqsXX8n5V0yrh8y+XpTkq48qOP8kO7G7uRnJpglwpWnBgZQIk/eTvj4npJWNAivJNcOLtJMAYbBPvztss/Ktw2SRIZIMFdBheo/0JAZotFSo2kfemTTyb0qURg17fhpuQsITVW1Z2P+1rgioaJcOlFqf3chi3o0njUKEV0VZh1bvClE7vRxGmzVLtWtaNPwAoK8dC3nLM6gZAATBA72Vf+7aPwM=
+- ghp-import -n -p -m "Update gh-pages." docs
