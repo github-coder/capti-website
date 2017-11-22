@@ -1,0 +1,152 @@
+// MIXINS
+
+// Pseudo element
+
+@mixin p-el($el, $el-width, $el-height) {
+  @if $el == "before" or $el == "after" {
+    &:#{$el} {
+      content: '';
+      width: $el-width;
+      height: $el-height;
+      @content;
+    }
+  }
+  @if $el == "both" {
+    &:before, &:after {
+      content: '';
+      width: $el-width;
+      height: $el-height;
+      @content;
+    }
+  }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// @include font-face('Raleway', $PathCss+'fonts/Raleway-Light', 300, normal, eot ttf woff);
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@function mq-px2em($px, $base-font-size: 16px) {
+    @if unitless($px) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+        @return mq-px2em($px + 0px); // That may fail.
+    } @else if unit($px) == em {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1em;
+}
+
+@function sprite-attr($icon, $attr) {
+    $newIcon: map-get($icons, $icon);
+    @if $newIcon == null {
+        @warn "Can't find an icon with the name #{$icon}";
+    }
+    @return map-get($newIcon, $attr);
+}
+
+@function icon-attr($icon) {
+    $attr: (
+        width: sprite-attr($icon, width),
+        height: sprite-attr($icon, height),
+        x: sprite-attr($icon, backgroundX),
+        y: sprite-attr($icon, backgroundY)
+    );
+
+    @return $attr;
+}
+
+/// Get the width of an icon in em
+
+@function icon_width($icon) {
+  @return mq-px2em(sprite-attr($icon, width));
+}
+
+/// Get the height of an icon in em
+
+@function icon_height($icon) {
+  @return mq-px2em(sprite-attr($icon, height));
+}
+
+$sprite: map-get($icons, sprite) !default;
+
+%sprite {
+    display: inline-block;
+    background-image: url(map-get($sprite, svgPath));
+    background-size: mq-px2em(map-get($sprite, width)) mq-px2em(map-get($sprite, height));
+}
+
+@mixin sprite($icon, $type: all) {
+    @if $type == all {
+        @extend %sprite;
+    }
+
+    $iconMap: icon-attr($icon);
+
+    @if $type == bgsize {
+        width: mq-px2em(map-get($iconMap, width) + 1);
+        height: mq-px2em(map-get($iconMap, height) + 1);
+        background-position: mq-px2em(map-get($iconMap, x) - 5) mq-px2em(map-get($iconMap, y) - 5);
+    }
+
+    @if $type == all or $type == size {
+        width: mq-px2em(map-get($iconMap, width) + 1);
+        height: mq-px2em(map-get($iconMap, height) + 1);
+    }
+
+    @if $type == all or $type == bg {
+        background-position: mq-px2em(map-get($iconMap, x) - 5) mq-px2em(map-get($iconMap, y) - 5);
+    }
+
+}

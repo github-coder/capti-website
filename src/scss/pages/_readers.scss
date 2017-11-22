@@ -1,0 +1,83 @@
+.readers {
+	.capti {
+		&--slider {
+			z-index: 2;
+			&__slide {
+				background: url(../img/background/capti--readers__background.jpg) center -7vh no-repeat;
+				background-size: cover;
+			}
+			&__overlay {
+				right: -15%;
+				@include size(60% 100%);
+				polygon {
+					fill: #fff;
+					opacity: .8;
+				}
+			}
+
+			.container {
+				max-width: none;
+				width: auto;
+			}
+
+			&__devices {
+
+				&-ipad {
+					left: 80%;
+					top: 15%;
+				}
+				&-iphone {
+					left: 100%;
+					bottom: 2%;
+				}
+			}
+			&__content {
+				padding-left: 73%;
+			}
+		}
+
+		&--icon {
+			margin: 0 0 7px;
+			&-1 {
+				&:before {
+					@include sprite(reader_dark);
+				}
+			}
+		}
+
+		&--photo {
+			&__fly {
+				top: 250px;
+				&-photo {
+					background-image: url(../img/background/capti--readers__background-fly.jpg);
+				}
+			}
+
+		}
+
+		&--call_to_action-top {
+			padding: 55px 0 65px;
+			&:before {
+				background-position: center bottom;
+			}
+			.capti--call_to_action {
+				&__container {
+					display: block;
+				}
+				&__text {
+					max-width: 980px;
+					margin: 0 auto 40px;
+					font-size: 1.125rem;
+					font-weight: 400;
+					line-height: 160%;
+				}
+				&__buttons {
+					text-align: center;
+				}
+			}
+		}
+
+		
+
+	}
+}

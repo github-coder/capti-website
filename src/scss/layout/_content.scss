@@ -1,0 +1,423 @@
+// Content
+
+.capti {
+
+	&--button {
+		a {
+			display: inline-block;
+			border: 2px solid #2280c7;
+			border-radius: 23px;
+			padding: 10px 30px;
+			font-weight: 600;
+			line-height: 24px;
+			text-transform: uppercase;
+			transition: background-color .3s ease, color .3s ease;
+			&:hover, &:focus {
+				background-color: #2280c7;
+				color: #fff;
+				text-decoration: none;
+				path {
+					fill: #fff;
+				}
+			}
+		}
+		&__arrow {
+			display: inline-block;
+			vertical-align: top;
+			@include size(17px 24px);
+			margin-left: 10px;
+			path {
+				fill: #2280c7;
+				transition: fill .3s ease;
+			}
+		}
+	}
+
+	&--slider {
+		position: relative;
+		height: 700px;
+		&__slide {
+			@include position(absolute, 0);
+		}
+		&__overlay {
+			@include position(absolute, 0 0 0 null);
+			@include size(25% 100%);
+			polygon {
+				fill: #fff;
+				opacity: .8;
+			}
+		}
+		.container {
+			position: relative;
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		&__devices {
+			@include position(absolute, 0 50% 0 calc(50% - 50vw));
+			div {
+				position: absolute;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+			&-ipad {
+				background-image: url(../img/ipad.png);
+				background-size: 410px 529px;
+				@include size(410px 529px);
+			}
+			&-laptop {
+				background-image: url(../img/laptop.png);
+				background-size: 843px 560px;
+				@include size(843px 560px);
+			}
+			&-iphone {
+				background-image: url(../img/iphone.png);
+				background-size: 290px 483px;
+				@include size(290px 483px);
+			}
+		}
+
+		&__content {
+			padding-left: 50%;
+		}
+
+		&__logo {
+			border-bottom: 5px solid rgba(#1290cc, .3);
+			margin-bottom: 15px;
+			span {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		&__title {
+			font-size: 1.875rem;
+			font-weight: 400;
+			color: #333;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			strong {
+				font-weight: 500;
+			}
+		}
+		&__subtitle {
+			font-size: 1.1875rem;
+			font-weight: 400;
+			line-height: 160%;
+			max-width: 480px;
+			width: 300px;
+			margin-bottom: 40px;
+		}
+	}
+
+	&--icon {
+		@include size(70px);
+		margin: 15px auto 20px;
+		position: relative;
+		@include p_el(before, null, null) {
+			@include position(absolute, 0);
+			margin: auto;
+			font-size: 16px;
+		}
+		&-1 {
+			&:before {
+				@include sprite(teacher);
+			}
+		}
+		&-2 {
+			&:before {
+				@include sprite(school);
+				left: -15px;
+				top: -15px;
+			}
+		}
+		&-3 {
+			&:before {
+				@include sprite(collage);
+			}
+		}
+		&-4 {
+			&:before {
+				@include sprite(reader);
+			}
+		}
+	}
+
+	&--awards {
+		background-color: #f8fafb;
+		padding: 50px 0;
+		&__animation {
+			position: relative;
+			overflow: hidden;
+			@include p_el(both, 50px, null) {
+				@include position(absolute, 0 null 0 0);
+				background: linear-gradient(to right, rgba(#f8fafb,1) 0%,rgba(#f8fafb,0) 100%);
+				z-index: 2;
+			}
+			&:after {
+				left: auto;
+				right:0;
+				background: linear-gradient(to right, rgba(#f8fafb,0) 0%,rgba(#f8fafb,1) 100%);
+			}
+		}
+		&__list {
+			position: relative;
+			z-index: 0;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: 1200px;
+			animation: awards_run 80s linear infinite;
+			li{
+				min-width: 200px;
+				width: 200px;
+				padding: 0 20px;
+				opacity: .8;
+				transition: opacity .3s ease;
+				img {
+					@include size(100% auto);
+				}
+			}
+		}
+	}
+
+	&--seo {
+		position: relative;
+		padding: 60px 0 120px;
+
+		background: url(../img/waves.svg) center 105% repeat-x;
+		overflow: hidden;
+
+		.container {
+			position: relative;
+
+			> [class*='col-sm'] + [class*='col-sm'] {
+				margin-top: 60px;
+			}
+
+		}
+		h1, h2 {
+			display: inline-block;
+			font-size: 2.25rem;
+			font-weight: 500;
+			margin-bottom: 20px;
+			border-bottom: 5px solid #1290cc;
+			padding-bottom: 12px;
+		}
+
+		ul {
+			padding-left: 40px;
+			li {
+				position: relative;
+				font-size: 1.1875rem;
+				font-weight: 400;
+				margin-bottom: 7px;
+				@include p_el(before, 15px, 14.31px) {
+					@include position(absolute, 0 null 0 -30px);
+					font-size: 16px;
+					background: url(../img/icons/arrow.svg) center center no-repeat;
+					background-size: 15px, 14.31px;
+					margin: auto;
+				}
+			}
+		}
+
+		p {
+			line-height: 28px;
+		}
+
+		&__with-img {
+			padding: 120px 0;
+			background: url(../img/explore-back.jpg) center -10vh no-repeat;
+			background-size: cover;
+			color: #fff;
+			@include p_el(before, null, null) {
+				@include position(absolute, 0);
+				background: linear-gradient(to right, rgba(14,83,117,0.6) 0%,rgba(0,0,0,0) 100%);
+			}
+			h1, h2 {
+				display: block;
+				padding: 0;
+				margin-bottom: 40px;
+				border-bottom:0;
+			}
+		}
+	}
+
+	&--photo {
+		&__row {
+			height: 450px;
+			.col-sm-4 {
+				height: 100%;
+				overflow: hidden;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+		&__fly {
+			@include position(absolute, null 0 null null);
+			@include size(600px 400px);
+			&-photo {
+				position: relative;
+				@include size(100%);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				box-shadow: 5px 10px 45px rgba(109, 112, 113, 0.25);
+			}
+			&-icon {
+				display: inline-block;
+				position: absolute;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: auto;
+				opacity: .2;
+				&-1 {
+					left:0;
+					right:50px;
+					top: -140px;
+					@include size(150px);
+					background-image: url(../img/icons/icon-1.svg);
+					background-size: 150px 150px;
+				}
+				&-2 {
+					bottom: 0;
+					left: -200px;
+					@include size(175px);
+					background-image: url(../img/icons/icon-2.svg);
+					background-size: 175px 175px;
+				}
+				&-3 {
+					left:200px;
+					right:0;
+					bottom: -190px;
+					opacity: .3;
+					@include size(170px);
+					background-image: url(../img/icons/icon-3.svg);
+					background-size: 170px 170px;
+				}
+			}
+		}
+	}
+
+	&--map {
+		position: relative;
+		z-index: 2;
+		@include size(100% 100vh);
+		#map {
+			@include size(100%);
+		}
+		.leaflet-marker-pane {
+			z-index: 700 !important;
+		}
+		.leaflet-control-attribution {
+			display: none;
+		}
+	}
+	
+	&--call_to_action {
+		position: relative;
+		background-color: #2c5464;
+		overflow: hidden;
+
+		padding: 45px 0;
+
+		@include p_el(before, null, null) {
+			@include position(absolute, 0);
+			background: url(../img/waves.svg) center center no-repeat;
+			background-size: 110% auto;
+			opacity: .05;
+			z-index: 0;
+		}
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__text {
+			font-weight: bold;
+			color: #fff;
+		}
+		&__suptitle {
+			font-size: 1rem;
+			color: rgba(#fff, .5);
+			margin-bottom: 10px;
+		}
+		&__title {
+			font-size: 1.5rem;
+			line-height: 120%;
+			margin-bottom: 15px;
+		}
+
+		&__singup, &__getquote {
+			display: inline-block;
+			border-radius: 23px;
+			padding: 10px 30px;
+			font-weight: 600;
+			line-height: 24px;
+			text-transform: uppercase;
+			transition: background-color .3s ease, color .3s ease;
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+		}
+
+		&__singup {
+			border: 2px solid #2280c7;
+			background-color: #2280c7;
+			color: #fff;
+			transition: background-color .3s ease, border-color .3s ease;
+			.capti--button__arrow {
+				display: inline-block;
+				vertical-align: top;
+				@include size(17px 24px);
+				margin-left: 10px;
+				path {
+					fill: #fff;
+					transition: fill .3s ease;
+				}
+			}
+			&:hover, &:focus {
+				background-color: darken(#2280c7, 5%);
+				border: 2px solid darken(#2280c7, 5%);
+				color: #fff;
+				.capti--button__arrow {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+
+		&__getquote {
+			border: 2px solid #fff;
+			color: #fff;
+			margin-left: 10px;
+			&:hover, &:focus {
+				background-color: #fff;
+				color: #2280c7;
+			}
+			i {
+				margin-right: 5px;
+			}
+		}
+
+	}
+
+}
+
+@keyframes awards_run {
+  0% {
+    left:0;
+  }
+  100% {
+    left:-1200px;
+  }
+}

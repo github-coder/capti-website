@@ -1,0 +1,124 @@
+{# layout.twig #}
+
+<!doctype html>
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+{% block head %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{linkPath}}favicon.ico">
+	<link rel="apple-touch-icon" href="{{linkPath}}apple-touch-icon.png">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="https://devel.captivoice.com/capti-site/themes/capti/css/style.css?bn1639" rel="stylesheet">
+	<link href="{{linkPath}}css/main.css" rel="stylesheet">
+{% endblock %}
+</head>
+
+<body>
+	<div id="navigation">
+		<div>
+			<div class="menuBar">
+				<div class="gwt-HTML">
+					<header>
+						<section class="container">
+							<section class="row">
+								<aside class="col-xs-12 col-sm-3">
+									<h1>
+										<a aria-label="Capti" href="https://devel.captivoice.com/capti-site/" tabindex="0"></a>
+									</h1>
+								</aside>
+								<nav class="navigation col-xs-12 col-sm-9">
+									<input type="checkbox" id="check1" name="check1" aria-hidden="true">
+									<label for="check1">
+										<span class="horizontal horizont1"></span>
+										<span class="horizontal"></span>
+										<span class="horizontal horizont2"></span>
+										<div aria-label="Show menu" class="labelmenutext">Menu</div>
+									</label>
+									<ul role="tabpanel">
+										<li class="menuitemli-get_capti">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/entry/download" temp="https://devel.captivoice.com/capti-site/" class="menuitem-get_capti" aria-selected="false" tabindex="1">Get Capti</a>
+										</li>
+										<li class="menuitemli-pricing">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/entry/get_capti_subscription" temp="https://devel.captivoice.com/capti-site/" class="menuitem-pricing" aria-selected="false" tabindex="2">Pricing</a>
+										</li>
+										<li class="menuitemli-explore">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/entry/explore" temp="https://devel.captivoice.com/capti-site/" class="menuitem-explore" aria-selected="false" tabindex="3">Explore</a>
+										</li>
+										<li class="menuitemli-education">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/entry/education" temp="https://devel.captivoice.com/capti-site/" class="menuitem-education" aria-selected="false" tabindex="4">Education</a>
+										</li>
+										<li class="menuitemli-support">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/entry/faq" temp="https://devel.captivoice.com/capti-site/" class="menuitem-support" aria-selected="false" tabindex="5">Support</a>
+										</li>
+										<li class="menuitemli-news">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/page/blog" temp="https://devel.captivoice.com/capti-site/" class="menuitem-news" aria-selected="false" tabindex="6">News</a>
+										</li>
+										<li class="menuitemli-about">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/public/entry/about_us" temp="https://devel.captivoice.com/capti-site/" class="menuitem-about" aria-selected="false" tabindex="7">About</a>
+										</li>
+										<li class="menuitemli-log_in">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/#login" temp="https://devel.captivoice.com/capti-site/" class="menuitem-log_in" aria-selected="false" tabindex="8">Log in</a>
+										</li>
+										<li class="menuitemli-sign_up">
+											<a role="tab" href="https://devel.captivoice.com/capti-site/#signup" temp="https://devel.captivoice.com/capti-site/" class="menuitem-sign_up" aria-selected="false" tabindex="9">Sign up</a>
+										</li>
+									</ul>
+								</nav>
+							</section>
+						</section>
+					</header>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% block main %}{% endblock %}
+
+	<div id="navigation-footer" style="clear:both;">
+	    <div>
+	        <footer>
+	            <section class="container">
+	                <section class="row">
+	                	<div class="col-xs-12 col-sm-3 col-sm-push-9">
+							<ul class="footer-social-links">
+								<li class="facebook"><a href="https://www.facebook.com/pages/Capti-Voice/223708031015524"><i class="fa fa-facebook"></i></a></li>
+								<li class="twitter"><a href="https://twitter.com/CaptiVoice"><i class="fa fa-twitter"></i></a></li>
+								<li class="linkedin"><a href="http://www.linkedin.com/groups/Capti-Voice-4084815"><i class="fa fa-linkedin"></i></a></li>
+								<li class="youtube"><a href="http://www.youtube.com/"><i class="fa fa-youtube-play"></i></a></li>
+							</ul>
+	                	</div>            
+	                    <div class="col-xs-12 col-sm-9 col-sm-pull-3">                
+	                        <ul>                    
+	                            <li><a href="/capti-site/public/entry/eula">EULA</a></li>
+	                            <li><a href="/capti-site/public/entry/terms_of_service">Terms Of Service</a></li>
+	                            <li><a href="/capti-site/public/entry/privacy_policy">Privacy Policy</a></li>
+	                            <li><a href="/capti-site/public/entry/credits">Credits</a></li>
+	                            <li><a href="/capti-site/public/entry/sitemap">Site Map</a></li>
+	                        </ul>                
+	                        <p>© 2010-2017. All rights reserved. Charmtech Labs LLC.</p>            
+	                    </div>
+
+	                </section>    
+	            </section>
+	        </footer>
+	    </div>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<script src="{{linkPath}}js/main.js"></script>
+
+</body>
+</html>

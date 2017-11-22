@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+// 'sprite/sprite',
+@import
+  'bourbon',
+  'sprite/sprite',
+  'components/mixins';
+
+// 3. Layout
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/content';
+
+// 3. Pages
+@import
+  'pages/home',
+  'pages/teachers',
+  'pages/k12',
+  'pages/collage-faculty',
+  'pages/readers';

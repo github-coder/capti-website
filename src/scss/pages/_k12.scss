@@ -1,0 +1,98 @@
+.k12-admin {
+	.capti {
+		&--slider {
+			z-index: 2;
+			&__slide {
+				background: url(../img/background/capti--k12__background.jpg) center -10vh no-repeat;
+				background-size: cover;
+			}
+			&__overlay {
+				right: -25%;
+				@include size(60% 100%);
+				polygon {
+					fill: #fff;
+					opacity: .8;
+				}
+			}
+
+			.container {
+				max-width: none;
+				width: auto;
+			}
+
+			&__devices {
+
+				&-laptop {
+					left: calc(100% - 421px);
+					bottom: -20%;
+				}
+			}
+			&__content {
+				padding-left: 75%;
+			}
+		}
+
+		&--icon {
+			margin: 0 0 7px 15px;
+			&-1 {
+				&:before {
+					@include sprite(school_dark);
+				}
+			}
+		}
+
+		&--photo {
+			&__fly {
+				top: 250px;
+				&-photo {
+					background-image: url(../img/background/capti--k12__background-fly.jpg);
+				}
+			}
+
+			&__1 {
+				background-image: url(../img/background/capti--teacher__background-row-1.jpg);
+			}
+			&__2 {
+				background-image: url(../img/background/capti--teacher__background-row-2.jpg);
+			}
+			&__3 {
+				background-image: url(../img/background/capti--teacher__background-row-3.jpg);
+			}
+		}
+
+		&--call_to_action-top {
+			padding: 110px 0 0;
+			overflow: visible;
+			&:before {
+				background-position: center top;
+			}
+			.capti--call_to_action {
+				&__container {
+					display: block;
+				}
+				&__text {
+					max-width: 980px;
+					margin: 0 auto 40px;
+					font-size: 1.125rem;
+					font-weight: 400;
+					line-height: 160%;
+				}
+				&__buttons {
+					text-align: center;
+					margin-bottom: -24px;
+					p {
+						font-size: 1.375rem;
+						font-weight: bold;
+						line-height: 120%;
+						color: #fff;
+						margin-bottom: 30px;
+
+					}
+				}
+			}
+		}
+
+		
+
+	}
+}

@@ -1,0 +1,126 @@
+{# index.twig #}
+{% extends "base/layout.twig" %}
+
+{% block title %}Capti | Readers {% endblock %}
+
+{% block main %}
+
+<script>
+	var root = document.documentElement;
+	root.className += ' readers';
+</script>
+
+<div class="capti--slider">
+	<div class="capti--slider__slide"></div>
+	<svg class="capti--slider__overlay" viewBox="0 0 10 10" preserveAspectRatio="none">
+		<polygon points="0,0 10,0 10,10 1,10"></polygon>
+	</svg>
+	<div class="container">
+		<div class="capti--slider__devices">
+			<div class="capti--slider__devices-ipad"></div>
+			<div class="capti--slider__devices-iphone"></div>
+		</div>
+		<div class="capti--slider__content">
+			<div class="capti--slider__logo"><span class="capti--icon capti--icon-1"></span></div>
+			<div class="capti--slider__title"><strong>Readers</strong></div>
+			<div class="capti--slider__subtitle">Students, <br>directors of student services, <br>auditory learners, <br>avid readers, <br>visually impaired, <br>dyslexic, <br>people who read on the go, <br>in the gym, or while working</div>
+		</div>
+	</div>
+</div>
+
+<div class="capti--call_to_action capti--call_to_action-top">
+	<div class="container">
+		<div class="capti--call_to_action__container">
+			<div class="capti--call_to_action__text">
+				<p>Capti is the best productivity app for listening to e-books, documents, and web pages. It is perfect for learning English and other languages, as well as for listening to any reading materials on the go and hands-free.</p>
+				<p>Capti is universally accessible, and people who have vision impairments, dyslexia, and other print disabilities use Capti as an assistive technology. People with and without disabilities use Capti to be more productive at school and at work, or they can relax and listen to news articles and e-books for pleasure.</p>
+			</div>
+
+			<div class="capti--call_to_action__buttons">
+				<a href="{{linkPath}}" class="capti--call_to_action__singup">Try Capti now <svg version="1.1" class="capti--button__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16"><path d="M7.8,1.2c0,0.3,0.1,0.6,0.3,0.8L13,6.9H1.3C0.6,6.9,0.1,7.4,0.1,8s0.5,1.1,1.1,1.1H13L8.1,14c-0.2,0.2-0.3,0.5-0.3,0.8 s0.1,0.6,0.3,0.8c0.4,0.4,1.2,0.4,1.6,0l6.8-6.8c0,0,0.1-0.1,0.1-0.2c0.2-0.3,0.2-0.7,0.1-1c0-0.1-0.1-0.3-0.2-0.4l0,0L9.8,0.3 c-0.4-0.4-1.2-0.4-1.6,0C7.9,0.6,7.8,0.8,7.8,1.2z"/></svg></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="capti--seo">
+	<div class="container">
+		<div class="col-sm-8">
+			<h1>Why Capti</h1>
+			<ul>
+				<li>The easiest way to listen to documents from Dropbox, Google Drive, OneDrive
+				<li>The easiest access to books from Bookshare and Gutenberg Project</li>
+				<li>The best quality OCR for converting photos and PDFs to readable text</li>
+				<li>The best quality text-to-speech voices (IVONA, Acapela, NeoSpeech)</li>
+				<li>The only reading tool offering dynamically created flashcard games</li>
+				<li>The only reading tool with context-sensitive word and phrase translation</li>
+				<li>The best special needs solution of 2017 (according to EdTech Digest)</li>
+			</ul>
+		</div>
+		<div class="col-sm-7">
+			<h2>Some ideas of where Capti can be used</h2>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul>
+						<li>On the bus</li>
+						<li>In the subway</li>
+						<li>At the gym</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul>
+						<li>In the kitchen</li>
+						<li>In a car</li>
+						<li>On an airplane</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="capti--photo__fly">
+		<i class="capti--photo__fly-icon capti--photo__fly-icon-1"></i>
+		<i class="capti--photo__fly-icon capti--photo__fly-icon-2"></i>
+		<i class="capti--photo__fly-icon capti--photo__fly-icon-3"></i>
+		<div class="capti--photo__fly-photo"></div>
+	</div>
+
+</div>
+
+<div class="capti--seo capti--seo__with-img">
+	<div class="container">
+		<div class="col-sm-6">
+			<h2>Where is Capti useful</h2>
+			<p>Capti is useful in many scenarios. For example, you can add morning news to your Playlist and start listening to it on your iPad at home, continue listening from the same spot on the iPhone during your commute, add some documents to your Playlist online when you are at work or at school; catch up with the reading while you are exercising at the gym; and relax on the couch at home while listening to your computer narrating your favorite e-book.</p>
+			<p>Capti will synchronize your Playlist among all your devices, making the transitions seamless. Importantly, Capti stores your documents on your device, so you don’t need internet access to listen to them.</p>
+		</div>
+	</div>
+</div>
+
+<div class="capti--map">
+	<div id="map"></div>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+	<script type="text/javascript" src="{{linkPath}}js/us-states.js"></script>
+	<script>
+		function getColor(a,o){var e;switch(a){case"04":case"06":case"08":case"09":case"25":case"27":case"29":case"34":case"35":case"36":case"39":case"41":case"42":case"45":case"48":case"51":case"53":case"54":case"55":e=o?"#5b92b9":"#fff";break;default:e="transparent"}return e}function style(a){return{weight:.5,opacity:1,color:getColor(a.id,!1),fillOpacity:.5,fillColor:getColor(a.id,!0)}}var map=L.map("map",{zoomControl:!1}).setView([37.8,-96],5);map.dragging.disable(),map.touchZoom.disable(),map.doubleClickZoom.disable(),map.scrollWheelZoom.disable(),map.boxZoom.disable(),map.keyboard.disable(),map.tap&&map.tap.disable(),document.getElementById("map").style.cursor="default";var positron=L.tileLayer("http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png",{minZoom:5,maxZoom:5,id:"mapbox.light"}).addTo(map),positronLabels=L.tileLayer("http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png",{minZoom:5,maxZoom:5,id:"mapbox.light"}).addTo(map),captiIcon=L.icon({iconUrl:"{{linkPath}}img/capti.png",iconSize:[56,30],iconAnchor:[28,30]});L.marker([35.000263,-111.642503],{icon:captiIcon}).addTo(map);L.marker([37.006186,-120.233256],{icon:captiIcon}).addTo(map);L.marker([37.403906,-105.619731],{icon:captiIcon}).addTo(map);L.marker([41.039048,-72.053528],{icon:captiIcon}).addTo(map);L.marker([41.987974,-70.917521],{icon:captiIcon}).addTo(map);L.marker([46.705401,-94.514696],{icon:captiIcon}).addTo(map);L.marker([37.109566,-92.533957],{icon:captiIcon}).addTo(map);L.marker([39.54083,-73.636547],{icon:captiIcon}).addTo(map);L.marker([33.000263,-106.021329],{icon:captiIcon}).addTo(map);L.marker([43.513027,-74.843806],{icon:captiIcon}).addTo(map);L.marker([40.378802,-82.518598],{icon:captiIcon}).addTo(map);L.marker([44.374138,-120.711348],{icon:captiIcon}).addTo(map);L.marker([40.952649,-77.76278],{icon:captiIcon}).addTo(map);L.marker([33.866903,-81.364143],{icon:captiIcon}).addTo(map);L.marker([30.501861,-99.312942],{icon:captiIcon}).addTo(map);L.marker([37.413497,-78.397659],{icon:captiIcon}).addTo(map);L.marker([47.700239,-120.033359],{icon:captiIcon}).addTo(map);L.marker([38.536951,-80.518598],{icon:captiIcon}).addTo(map);L.marker([44.768478,-90.415429],{icon:captiIcon}).addTo(map);var geojson=L.geoJson(statesData,{style:style}).addTo(map);
+	</script>
+</div>
+
+<div class="capti--call_to_action">
+	<div class="container">
+		<div class="capti--call_to_action__container">
+			<div class="capti--call_to_action__text">
+				<div class="capti--call_to_action__suptitle">Start using Capti now</div>
+				<div class="capti--call_to_action__title">Create an account or talk to our sales team!</div>
+			</div>
+
+			<div class="capti--call_to_action__buttons">
+				<a href="{{linkPath}}" class="capti--call_to_action__singup">Sign up for free <svg version="1.1" class="capti--button__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16"><path d="M7.8,1.2c0,0.3,0.1,0.6,0.3,0.8L13,6.9H1.3C0.6,6.9,0.1,7.4,0.1,8s0.5,1.1,1.1,1.1H13L8.1,14c-0.2,0.2-0.3,0.5-0.3,0.8 s0.1,0.6,0.3,0.8c0.4,0.4,1.2,0.4,1.6,0l6.8-6.8c0,0,0.1-0.1,0.1-0.2c0.2-0.3,0.2-0.7,0.1-1c0-0.1-0.1-0.3-0.2-0.4l0,0L9.8,0.3 c-0.4-0.4-1.2-0.4-1.6,0C7.9,0.6,7.8,0.8,7.8,1.2z"/></svg></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

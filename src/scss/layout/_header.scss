@@ -1,0 +1,9 @@
+
+header {
+	.container {
+		@media(min-width: 1200px), (min-width: 992px), (min-width: 768px) {
+			width: auto;
+			padding-right: 30px;
+		}
+	}
+}

@@ -1,0 +1,70 @@
+// Base
+
+* {
+	&,&:before,&:after {
+		box-sizing: border-box;
+	}
+}
+
+body {
+	font-family: sans-serif;
+	font-size: rem(16);
+	line-height: 140%;
+	background-color:#fff;
+	color:#333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+}
+
+.hidden {
+	display:none;
+}
+
+a {
+	text-decoration: none;
+	transition: color .3s ease;
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+*:focus {
+	outline:0;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media(max-width: 992px) {
+
+	.collapse {
+		display: none;
+		@include position(absolute, 100% 15px null null);
+	}
+
+	.collapse.in {
+		display: block;
+	}
+
+	tr.collapse.in {
+		display: table-row;
+	}
+
+	tbody.collapse.in {
+		display: table-row-group;
+	}
+
+	.collapsing {
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		transition-property: height, visibility;
+		transition-duration: 0.35s;
+		transition-timing-function: ease;
+	}
+}

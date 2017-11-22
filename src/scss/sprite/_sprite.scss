@@ -1,0 +1,11 @@
+$icons: (
+      sprite: (width: 632px, height: 576px, svgPath: $PathCss+'img/sprite.svg'),
+    collage: (width: 60px, height: 60px, backgroundX: 0px, backgroundY: 0px),
+    collage_dark: (width: 60px, height: 60px, backgroundX: -70px, backgroundY: -70px),
+    reader: (width: 60px, height: 60px, backgroundX: -140px, backgroundY: -140px),
+    reader_dark: (width: 60px, height: 60px, backgroundX: -210px, backgroundY: -210px),
+    school: (width: 95.3px, height: 68px, backgroundX: -280px, backgroundY: -280px),
+    school_dark: (width: 95.3px, height: 68px, backgroundX: -386px, backgroundY: -358px),
+    teacher: (width: 60px, height: 60px, backgroundX: -492px, backgroundY: -436px),
+    teacher_dark: (width: 60px, height: 60px, backgroundX: -562px, backgroundY: -506px),
+);
