@@ -23,12 +23,22 @@
 			&__devices {
 
 				&-ipad {
-					left: 80%;
+					left: 52%;
+					top: 2%;
+					transform: translate3d(-160px, 0, 0);
+					animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) 1s 1 forwards, opacity_device .7s linear 1s 1 forwards;
+				}
+				&-laptop {
+					left: 58%;
 					top: 15%;
+					transform: translate3d(-240px, 0, 0);
+					animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) .5s 1 forwards, opacity_device .7s linear .5s 1 forwards;
 				}
 				&-iphone {
-					left: 100%;
+					left: 110%;
 					bottom: 2%;
+					transform: translate3d(-240px, 0, 0);
+					animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) .2s 1 forwards, opacity_device .7s linear .2s 1 forwards;
 				}
 			}
 			&__content {
@@ -55,6 +65,12 @@
 
 		}
 
+		&--call_to_action {
+			&__text {
+				width: auto;
+			}
+		}
+
 		&--call_to_action-top {
 			padding: 55px 0 65px;
 			&:before {
@@ -65,14 +81,28 @@
 					display: block;
 				}
 				&__text {
-					max-width: 980px;
+					max-width: 850px;
+					width: 100%;
 					margin: 0 auto 40px;
 					font-size: 1.125rem;
 					font-weight: 400;
 					line-height: 160%;
 				}
 				&__buttons {
-					text-align: center;
+					max-width: 850px;
+					margin: 0 auto;
+					text-align: left;
+					hr {
+						opacity: .3;
+					}
+					p {
+						font-size: 1.375rem;
+						font-weight: bold;
+						line-height: 120%;
+						color: #fff;
+						margin-bottom: 30px;
+
+					}
 				}
 			}
 		}
