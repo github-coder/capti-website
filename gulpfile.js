@@ -26,7 +26,7 @@ gulp.task('css', function () {
 
 gulp.task('css__static', function () {
     var variables = {
-        PathCss: "/capti-homepage/"
+        PathCss: "/capti-website/"
     }
     return gulp.src('src/scss/main.scss')
     .pipe(sassVars(variables, { verbose: true }))
@@ -35,7 +35,7 @@ gulp.task('css__static', function () {
         errLogToConsole: true
     }))
     .pipe(autoprefixer('last 4 version'))
-    .pipe(gulp.dest('docs/css'));
+    .pipe(gulp.dest('deploy/css'));
 });
 
 gulp.task('html', function () {
@@ -53,10 +53,10 @@ gulp.task('html__static', function () {
     return gulp.src('src/html/*.twig')
     .pipe(twig({
         data: {
-           linkPath: '/capti-homepage/'
+           linkPath: '/capti-website/'
         }
     }))
-    .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('deploy'));
 });
 
 gulp.task('browser-sync', function() {
@@ -102,7 +102,7 @@ gulp.task('svg', function () {
 gulp.task('copy', function () {
     gulp.src(['server/img/**/*', 'server/css/**/*', 'server/js/**/*'], {
         base: 'server'
-    }).pipe(gulp.dest('docs'));
+    }).pipe(gulp.dest('deploy'));
 });
 
 gulp.task('build', ['svg', 'html', 'css']);
