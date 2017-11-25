@@ -13,8 +13,6 @@ before_install:
 - chmod u=rw,og= ~/.ssh/github_deploy_key
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/github_deploy_key" >> ~/.ssh/config
-- git remote set-url origin git@github.com:github-coder/capti-website.git
-- git fetch origin -f master:master
 
 install:
 - yarn install
@@ -24,5 +22,9 @@ script:
 - gulp build__static
 
 after_success:
-- ls
-- git push origin master
+- git clone --quiet --branch=gh-pages git@github.com:github-coder/capti-website.git gh-pages
+- cd gh-pages
+- cp -Rf ../docs/* .
+- git add -f .
+- git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
+- git push -fq origin gh-pages
