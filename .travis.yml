@@ -12,15 +12,16 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_58dc6dc51559_key -iv $encrypted_58dc6dc51559_iv -in github_deploy_key.enc -out ~/.ssh/github_deploy_key -d
 - chmod u=rw,og= ~/.ssh/github_deploy_key
 - echo "Host github.com" >> ~/.ssh/config
-- echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
+- echo "  IdentityFile ~/.ssh/github_deploy_key" >> ~/.ssh/config
 - git --version
 - git remote set-url origin git@github.com:github-coder/capti-website.git
-- git fetch origin -f gh-pages:gh-pages
 
 install:
 - yarn install
+
 script:
 - gulp svg
 - gulp build__static
+
 after_success:
-- ghp-import -n -p -m "Update gh-pages." docs
+- git fetch origin -f gh-pages:gh-pages
