@@ -1,6 +1,6 @@
 .capti--icon-1:before, .capti--icon-2:before, .capti--icon-3:before, .capti--icon-4:before, .teachers .capti--icon-1:before, .k12-admin .capti--icon-1:before, .collage-faculty .capti--icon-1:before, .readers .capti--icon-1:before {
   display: inline-block;
-  background-image: url("/capti-homepage/img/sprite.svg");
+  background-image: url("/capti-website/img/sprite.svg");
   background-size: 39.5em 36em; }
 
 @media (min-width: 1200px), (min-width: 992px), (min-width: 768px) {
