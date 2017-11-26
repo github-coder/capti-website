@@ -1,7 +1,7 @@
 {
-  "name": "Capti Website",
+  "name": "capti-website",
+  "description": "Capti Website",
   "version": "2.0.0",
-  "description": "",
   "url": "https://github-coder.github.io/capti-website/",
   "main": "index.js",
   "scripts": {
