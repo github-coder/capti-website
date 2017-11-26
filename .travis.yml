@@ -28,3 +28,6 @@ after_success:
 - git add -f .
 - git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
 - git push -fq origin gh-pages
+
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
