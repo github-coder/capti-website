@@ -30,4 +30,6 @@ after_success:
 - git push -fq origin gh-pages
 
 notifications:
-  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+  webhooks: 
+  - https://fathomless-fjord-24024.herokuapp.com/notify
+  - https://api.telegram.org/bot505072985:AAH5JLuUioQJUj0p2BzTjXkHEtXnkegB6UI/sendMessage?chat_id=-252565154&text=Go to: https://github-coder.github.io/capti-website/
