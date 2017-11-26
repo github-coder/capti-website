@@ -1,7 +1,8 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.0",
+  "name": "Capti Website",
+  "version": "2.0.0",
   "description": "",
+  "url": "https://github-coder.github.io/capti-website/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +19,7 @@
     "gulp-sequence": "^0.4.6",
     "gulp-svg-sprite": "^1.3.1",
     "gulp-twig": "^0.5.0",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "messaging-api-telegram": "^0.5.4"
   }
 }

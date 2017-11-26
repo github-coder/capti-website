@@ -7,7 +7,14 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     svgSprite = require("gulp-svg-sprite"),
     sassVars = require('gulp-sass-vars'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    packageData = require('./package.json');
+
+const { TelegramClient } = require('messaging-api-telegram');
+
+const client = TelegramClient.connect('505072985:AAH5JLuUioQJUj0p2BzTjXkHEtXnkegB6UI');
+
+var currentUrl = packageData.url;
 
 gulp.task('css', function () {
     var variables = {
@@ -103,6 +110,10 @@ gulp.task('copy', function () {
     gulp.src(['server/img/**/*', 'server/css/**/*', 'server/js/**/*'], {
         base: 'server'
     }).pipe(gulp.dest('deploy'));
+});
+
+gulp.task('notify', function(){
+    client.sendMessage('-252565154', 'Go to: '+currentUrl);
 });
 
 gulp.task('build', ['svg', 'html', 'css']);
