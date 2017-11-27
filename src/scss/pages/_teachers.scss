@@ -5,10 +5,19 @@
 			&__slide {
 				background: url(../img/background/capti--teacher__background.jpg) center -15vh no-repeat;
 				background-size: cover;
+				@media(max-width: 1200px) {
+					background-position: center center;
+				}
 			}
 			&__overlay {
-				right: -25%;
-				@include size(60% 100%);
+				@include size(45% 100%);
+				&-svg {
+					left: 25%;
+					width: 140%;
+					@media(max-width: 1200px) {
+						left: 0;
+					}
+				}
 				polygon {
 					fill: #fff;
 					opacity: .8;
@@ -37,6 +46,13 @@
 			}
 			&__content {
 				padding-left: 75%;
+				@media(max-width: 1200px) {
+					padding-left: 65%;
+				}
+				@media(max-width: 600px) {
+					padding-left: 0;
+					margin-top:-100px;
+				}
 			}
 		}
 
@@ -62,16 +78,28 @@
 			}
 			&__2 {
 				background-image: url(../img/background/capti--teacher__background-row-2.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
 			}
 			&__3 {
 				background-image: url(../img/background/capti--teacher__background-row-3.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
 			}
 		}
 
 		&--call_to_action-top {
 			padding: 130px 0 45px;
+			@media(max-width: 600px) {
+				padding: 30px 0;
+			}
 			&:before {
 				background-position: center top;
+				@media(max-width: 992px) {
+					background-size: auto 150px;
+				}
 			}
 			.capti--call_to_action {
 				&__container {
@@ -89,6 +117,7 @@
 					max-width: 850px;
 					margin: 0 auto;
 					text-align: left;
+					white-space: normal;
 					hr {
 						opacity: .3;
 					}

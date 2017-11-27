@@ -36,12 +36,32 @@
 	&--slider {
 		position: relative;
 		height: 700px;
+		@media(max-width: 992px) {
+			height: 550px;
+		}
+		@media(max-width: 600px) {
+			height: auto;
+		}
 		&__slide {
 			@include position(absolute, 0);
+			@media(max-width: 600px) {
+				@include p_el(before, null, null) {
+					@include position(absolute, 0);
+					background-color: rgba(#fff, .8);
+				}
+			}
 		}
 		&__overlay {
 			@include position(absolute, 0 0 0 null);
 			@include size(25% 100%);
+			overflow: hidden;
+			&-svg {
+				@include position(absolute, 0 null null 0);
+				@include size(100%);
+			}
+			@media(max-width: 600px) {
+				display: none;
+			}
 			polygon {
 				fill: #fff;
 				opacity: .8;
@@ -52,10 +72,18 @@
 			height: 100%;
 			display: flex;
 			align-items: center;
+			@media(max-width: 600px) {
+				display: block;
+			}
 		}
 
 		&__devices {
 			@include position(absolute, 0 50% 0 calc(50% - 50vw));
+			@media(max-width: 600px) {
+				@include position(relative, auto);
+				height: 500px;
+				transform: scale(.75) translateY(-25%);
+			}
 			div {
 				position: absolute;
 				background-position: center center;
@@ -116,6 +144,9 @@
 			max-width: 480px;
 			width: 300px;
 			margin-bottom: 40px;
+			@media(max-width: 1200px) {
+				width: 100%;
+			}
 		}
 
 	}
@@ -156,6 +187,11 @@
 	&--awards {
 		background-color: #fff;
 		padding: 60px 0 50px;
+
+		@media(max-width: 600px) {
+			padding: 30px 0 20px;
+		}
+
 		&__title {
 			margin-top: 10px;
 			text-align: center;
@@ -223,11 +259,18 @@
 		background: url(../img/waves.svg) center 105% repeat-x;
 		overflow: hidden;
 
+		@media(max-width: 1200px) {
+			padding: 40px 0;
+		}
+
 		.container {
 			position: relative;
 
-			> [class*='col-sm'] + [class*='col-sm'] {
+			> [class*='col-sm'] + [class*='col-sm'], > [class*='col-md'] + [class*='col-md'], > [class*='col-md'] + [class*='col-sm'] {
 				margin-top: 60px;
+				@media(max-width: 992px) {
+					margin-top: 40px;
+				}
 			}
 
 		}
@@ -270,6 +313,16 @@
 			@include p_el(before, null, null) {
 				@include position(absolute, 0);
 				background: linear-gradient(to right, rgba(14,83,117,0.6) 0%,rgba(0,0,0,0) 100%);
+				@media(max-width: 767px) {
+					background: rgba(14,83,117,0.7);
+				}
+			}
+
+			@media(max-width: 1200px) {
+				background-position: center center;
+			}
+			@media(max-width: 767px) {
+				padding: 60px 0 40px;
 			}
 			h1, h2 {
 				display: block;
@@ -285,6 +338,9 @@
 			border-left: 4px solid #1290cc;
 			background-color: rgba(227, 237, 242, 0.5);
 			padding: 20px 30px;
+			@media(max-width: 992px) {
+				display: block;
+			}
 			h3 {
 				font-weight: 500;
 				color: #999;
@@ -299,9 +355,18 @@
 			p {
 				font-size: 1.0625rem;
 				margin: 0 0 0 4%;
+				@media(max-width: 1200px) {
+					margin:10px 0 0;
+				}
+				a {
+					white-space: nowrap;
+				}
 				span {
 					margin: 0 15px;
 					color: rgba(#333, .3);
+					@media(max-width: 479px) {
+						opacity: 0;
+					}
 				}
 				.fa {
 					font-size: 15px;
@@ -314,6 +379,9 @@
 	&--photo {
 		&__row {
 			height: 450px;
+			@media(max-width: 992px) {
+				height: 280px;
+			}
 			.col-sm-4 {
 				height: 100%;
 				overflow: hidden;
@@ -325,6 +393,12 @@
 		&__fly {
 			@include position(absolute, null 0 null null);
 			@include size(600px 400px);
+			@media(max-width: 1200px) {
+				@include size(320px 240px);
+			}
+			@media(max-width: 992px) {
+				display: none
+			}
 			&-photo {
 				position: relative;
 				@include size(100%);
@@ -357,12 +431,15 @@
 				}
 				&-3 {
 					left:200px;
-					right:0;
 					bottom: -190px;
 					opacity: .3;
 					@include size(170px);
 					background-image: url(../img/icons/icon-3.svg);
 					background-size: 170px 170px;
+					@media(max-width: 1200px) {
+						left:auto;
+						right:0;
+					}
 				}
 			}
 		}
@@ -391,7 +468,11 @@
 	&--testimonial {
 		padding: 60px 0;
 		background: url(../img/waves.svg) center 100% repeat-x;
+		background-size: auto 150px;
 		z-index: 1;
+		@media(max-width: 600px) {
+			padding: 30px 0;
+		}
 		&__title {
 			text-align: center;
 			font-size: 2rem;
@@ -409,6 +490,9 @@
 			height: 260px;
 			list-style-type: none;
 			overflow: hidden;
+			@media(max-width: 992px) {
+				height: 340px;
+			}
 		}
 		.slide {
 			@include position(absolute, 0 null null 0);
@@ -420,6 +504,19 @@
 			transform: translateX(100%);
 			&.revers {
 				transform: translateX(-100%);
+			}
+			@media(max-width: 700px) {
+				justify-content: center;
+				&:nth-of-type(1), &:nth-of-type(2) {
+					.capti--testimonial__item:nth-of-type(1) {
+						display: none;
+					}
+				}
+				&:nth-of-type(3), &:nth-of-type(4) {
+					.capti--testimonial__item:nth-of-type(2) {
+						display: none;
+					}
+				}
 			}
 		}
 		.showing {
@@ -445,6 +542,13 @@
 			padding: 30px 40px;
 			@include size(50% calc(100% - 10px));
 			margin: 5px 15px;
+			@media(max-width: 700px) {
+				width: 100%;
+				max-width: 360px;
+			}
+			@media(max-width: 479px) {
+				padding: 20px;
+			}
 		}
 
 		&__text {
@@ -461,6 +565,11 @@
 			justify-content: space-between;
 			align-items: flex-start;
 			margin-top: 30px;
+			@media(max-width: 479px) {
+				left: 20px;
+				right: 20px;
+				bottom: 20px;
+			}
 			&-stars {
 				white-space: nowrap;
 				margin-right: 10px;
@@ -486,6 +595,7 @@
 			line-height: 40px;
 			margin-top:-20px;
 			opacity: .5;
+			z-index: 2;
 			transition: opacity .3s ease, transform .3s ease;
 			&:hover {
 				opacity: .8;
@@ -496,9 +606,27 @@
 				outline: 0;
 				box-shadow: none;
 			}
+			@media(max-width: 1440px) {
+				left: -25px;
+			}
+			@media(max-width: 1365px) {
+				left: -5px;
+			}
+			@media(max-width: 700px) {
+				left: 15px;
+			}
 			&-next {
 				left: auto;
-				right:-50px
+				right:-50px;
+				@media(max-width: 1440px) {
+					right: -25px;
+				}
+				@media(max-width: 1365px) {
+					right: -5px;
+				}
+				@media(max-width: 700px) {
+					right: 15px;
+				}
 			}
 		}
 
@@ -544,6 +672,9 @@
 			background-size: 110% auto;
 			opacity: .05;
 			z-index: 0;
+			@media(max-width: 992px) {
+				background-size: auto 150px;
+			}
 		}
 		.container {
 			position: relative;
@@ -554,12 +685,19 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			@media(max-width: 992px) {
+				display: block;
+			}
 		}
 
 		&__text {
 			font-weight: bold;
 			color: #fff;
 			width: 50%;
+			@media(max-width: 992px) {
+				width: 100%;
+				margin-bottom: 30px;
+			}
 		}
 		&__suptitle {
 			font-size: 1rem;
@@ -574,6 +712,9 @@
 
 		&__buttons {
 			white-space: nowrap;
+			@media(max-width: 600px) {
+				white-space: normal;
+			}
 		}
 
 		&__singup, &__getquote {
@@ -627,6 +768,9 @@
 			i {
 				margin-right: 8px;
 			}
+			@media(max-width: 600px) {
+				margin: 10px 0 0;
+			}
 		}
 
 		&__email, &__phone {
@@ -647,6 +791,12 @@
 			margin-left: 10px;
 			border-left: 1px solid rgba(#fff, .5);
 			padding-left: 15px;
+			@media(max-width: 479px) {
+				border:0;
+				padding: 0;
+				margin:10px 0 0;
+				display: block;
+			}
 		}
 
 	}

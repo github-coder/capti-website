@@ -8,9 +8,16 @@
 		ul {
 			margin: 40px 0 15px;
 			text-align: left;
+			@media(max-width: 767px) {
+				text-align: center;
+				margin: 20px 0 15px;
+			}
 			li {
 				padding: 0 15px 0 0;
 				margin-right: -4px;
+				@media(max-width: 600px) {
+					margin-bottom: 10px;
+				}
 				a {
 					font-size: 1rem;
 					font-weight: 300;
@@ -18,15 +25,27 @@
 				}
 				+ li {
 					padding: 0 15px 0 14px;
+					@media(max-width: 600px) {
+						border:0;
+					}
 				}
 			}
 			&.footer-social-links {
 				text-align: right;
+				@media(max-width: 767px) {
+					text-align: center;
+				}
 				li {
 					width: 50px;
 					text-align: center;
 					padding: 0;
 					vertical-align: top;
+					@media(max-width: 992px) {
+						width: 40px;
+					}
+					@media(max-width: 767px) {
+						width: 50px;
+					}
 					a {
 						font-size: 1.5rem;
 						color: #1290cc;
@@ -45,6 +64,10 @@
 			font-size: 1rem;
 			color: #999;
 			margin: 35px 0 40px;
+			@media(max-width: 767px) {
+				text-align: center;
+				margin: 20px 0;
+			}
 		}
 	}
 }

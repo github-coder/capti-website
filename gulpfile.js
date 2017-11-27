@@ -14,7 +14,7 @@ const { TelegramClient } = require('messaging-api-telegram');
 
 const client = TelegramClient.connect('505072985:AAH5JLuUioQJUj0p2BzTjXkHEtXnkegB6UI');
 
-var currentUrl = packageData.url;
+var currentUrl = packageData.url, currentName = packageData.name;
 
 gulp.task('css', function () {
     var variables = {
@@ -33,7 +33,7 @@ gulp.task('css', function () {
 
 gulp.task('css__static', function () {
     var variables = {
-        PathCss: "/capti-website/"
+        PathCss: "/"+currentName+"/"
     }
     return gulp.src('src/scss/main.scss')
     .pipe(sassVars(variables, { verbose: true }))
@@ -60,7 +60,7 @@ gulp.task('html__static', function () {
     return gulp.src('src/html/*.twig')
     .pipe(twig({
         data: {
-           linkPath: '/capti-website/'
+           linkPath: "/"+currentName+"/"
         }
     }))
     .pipe(gulp.dest('deploy'));

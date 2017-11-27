@@ -4,6 +4,7 @@
 <!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -20,6 +21,7 @@
 
 	<link href="https://devel.captivoice.com/capti-site/themes/capti/css/style.css?bn1639" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -82,6 +84,7 @@
 	</div>
 
 
+
 <script>
 	var root = document.documentElement;
 	root.className += ' readers';
@@ -89,9 +92,11 @@
 
 <div class="capti--slider">
 	<div class="capti--slider__slide"></div>
-	<svg class="capti--slider__overlay" viewBox="0 0 10 10" preserveAspectRatio="none">
-		<polygon points="0,0 10,0 10,10 1,10"></polygon>
-	</svg>
+    <div class="capti--slider__overlay">
+        <svg class="capti--slider__overlay-svg" viewBox="0 0 10 10" preserveAspectRatio="none">
+            <polygon points="0,0 10,0 10,10 1,10"></polygon>
+        </svg>
+    </div>
 	<div class="container">
 		<div class="capti--slider__devices">
 			<div class="capti--slider__devices-ipad"></div>
@@ -125,7 +130,7 @@
 
 <div class="capti--seo">
 	<div class="container">
-		<div class="col-sm-8">
+		<div class="col-md-8">
 			<h2>Why Capti</h2>
 			<ul>
 				<li>The best way to listen to documents from Dropbox, Google Drive, OneDrive</li>
@@ -137,7 +142,7 @@
 				<li>The best special needs solution of 2017 (according to EdTech Digest)</li>
 			</ul>
 		</div>
-		<div class="col-sm-7">
+		<div class="col-md-7">
 			<h2>Who is Capti for?</h2>
 			<div class="row">
 				<div class="col-sm-6">
@@ -155,7 +160,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-7">
+		<div class="col-md-7">
 			<h2>Some ideas of where Capti can be used</h2>
 			<div class="row">
 				<div class="col-sm-6">
@@ -353,6 +358,7 @@
 <script>
 	function labnolThumb(e){return'<img class="youtube-thumb" src="//i.ytimg.com/vi/'+e+'/hqdefault.jpg"><div class="play-button"></div>'}function labnolIframe(){var e=document.createElement("iframe");e.setAttribute("src","//www.youtube.com/embed/"+this.parentNode.dataset.id+"?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&showinfo=0"),e.setAttribute("frameborder","0"),e.setAttribute("id","youtube-iframe"),e.setAttribute("allowfullscreen",""),this.parentNode.replaceChild(e,this)}for(var v=document.getElementsByClassName("youtube-player"),n=0;n<v.length;n++){var p=document.createElement("div");p.innerHTML=labnolThumb(v[n].dataset.id),p.onclick=labnolIframe,v[n].appendChild(p)}
 </script>
+
 
 
 	<div id="navigation-footer" style="clear:both;">

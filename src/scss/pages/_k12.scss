@@ -5,10 +5,19 @@
 			&__slide {
 				background: url(../img/background/capti--k12__background.jpg) center -10vh no-repeat;
 				background-size: cover;
+				@media(max-width: 1200px) {
+					background-position: center center;
+				}
 			}
 			&__overlay {
-				right: -25%;
-				@include size(60% 100%);
+				@include size(45% 100%);
+				&-svg {
+					left: 25%;
+					width: 140%;
+					@media(max-width: 1200px) {
+						left: 0;
+					}
+				}
 				polygon {
 					fill: #fff;
 					opacity: .8;
@@ -27,16 +36,37 @@
 					bottom: -20%;
 					transform: translate3d(0, 80px, 0);
 					animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) .2s 1 forwards, opacity_device .7s linear .2s 1 forwards;
+					@media(max-width: 1200px) {
+						left:auto;
+						right: -12%;
+					}
+					@media(max-width: 992px) {
+						bottom:-30%;
+					}
 				}
 				&-iphone {
 					left: calc(100% + 50px);
 					bottom: -22%;
 					transform: translate3d(0, 80px, 0);
 					animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) .5s 1 forwards, opacity_device .7s linear .5s 1 forwards;
+					@media(max-width: 1200px) {
+						left:auto;
+						right: -3%;
+					}
+					@media(max-width: 992px) {
+						bottom:-32%;
+					}
 				}
 			}
 			&__content {
 				padding-left: 75%;
+				@media(max-width: 1200px) {
+					padding-left: 65%;
+				}
+				@media(max-width: 600px) {
+					padding-left: 0;
+					margin-top:-40px;
+				}
 			}
 		}
 
@@ -59,9 +89,15 @@
 
 			&__1 {
 				background-image: url(../img/background/capti--teacher__background-row-1.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
 			}
 			&__2 {
 				background-image: url(../img/background/capti--teacher__background-row-2.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
 			}
 			&__3 {
 				background-image: url(../img/background/capti--teacher__background-row-3.jpg);
@@ -71,8 +107,14 @@
 		&--call_to_action-top {
 			padding: 130px 0 45px;
 			overflow: visible;
+			@media(max-width: 600px) {
+				padding: 30px 0;
+			}
 			&:before {
 				background-position: center top;
+				@media(max-width: 992px) {
+					background-size: auto 150px;
+				}
 			}
 			.capti--call_to_action {
 				&__container {
@@ -90,6 +132,7 @@
 					max-width: 850px;
 					margin: 0 auto;
 					text-align: left;
+					white-space: normal;
 					hr {
 						opacity: .3;
 					}
