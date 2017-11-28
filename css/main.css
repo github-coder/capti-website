@@ -808,6 +808,10 @@
   padding: 60px 0;
   background: url("https://devel.captivoice.com/capti-site/themes/capti/images/explore-new/explore-back.jpg") no-repeat fixed center 20vh/cover;
   box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1); }
+  @media (max-width: 767px) {
+    .capti--dowload_some {
+      background-attachment: inherit;
+      background-position: center center; } }
   .capti--dowload_some:before {
     content: '';
     position: absolute;
