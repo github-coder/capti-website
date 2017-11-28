@@ -806,6 +806,10 @@
 		padding: 60px 0;
 		background: url("https://devel.captivoice.com/capti-site/themes/capti/images/explore-new/explore-back.jpg") no-repeat fixed center 20vh / cover;
 		box-shadow: inset 0 0 0 3px rgba(0,0,0,.1);
+		@media(max-width: 767px) {
+			background-attachment: inherit;
+			background-position: center center;
+		}
 		@include p_el(before, null, null) {
 			@include position(absolute, 0);
 			background-color: rgba(1,136,200, .75);
