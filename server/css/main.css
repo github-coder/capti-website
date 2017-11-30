@@ -443,6 +443,10 @@
   right: 0;
   height: 400px;
   width: 600px; }
+  @media (max-width: 1360px) {
+    .capti--photo__fly {
+      height: 320px;
+      width: 480px; } }
   @media (max-width: 1200px) {
     .capti--photo__fly {
       height: 240px;
@@ -1479,7 +1483,7 @@
     background-position: -4.6875em -4.6875em; }
 
 .collage-faculty .capti--photo__fly {
-  top: 250px; }
+  top: 200px; }
   .collage-faculty .capti--photo__fly-photo {
     background-image: url(../img/background/capti--collage__background-fly.jpg); }
 

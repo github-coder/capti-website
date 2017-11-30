@@ -396,6 +396,9 @@
 		&__fly {
 			@include position(absolute, null 0 null null);
 			@include size(600px 400px);
+			@media(max-width: 1360px) {
+				@include size(480px 320px);
+			}
 			@media(max-width: 1200px) {
 				@include size(320px 240px);
 			}
