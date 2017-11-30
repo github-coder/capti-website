@@ -923,21 +923,78 @@
   margin-top: -60px; }
   .home .capti--slider__title strong {
     font-weight: 500; }
+  @media (max-width: 600px) {
+    .home .capti--slider__title {
+      font-size: 1.75rem; } }
 
 .home .capti--slider__list {
   font-size: 1.5rem;
-  font-weight: 400; }
+  font-weight: 400;
+  padding-left: 20px; }
+  @media (max-width: 600px) {
+    .home .capti--slider__list {
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 1.25rem; } }
+  .home .capti--slider__list li {
+    position: relative;
+    line-height: 120%; }
+    .home .capti--slider__list li + li {
+      margin-top: 10px; }
+    .home .capti--slider__list li:before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 10px;
+      left: -20px;
+      background-color: #0188c8; }
 
 .home .capti--icon {
   margin: 15px auto 20px; }
 
 .home .capti--links {
+  position: relative;
   background: url(../img/waves.svg) center 105% repeat-x;
   background-size: auto 150px;
   z-index: 1; }
   @media (max-width: 992px) {
     .home .capti--links {
       padding: 45px 0 25px; } }
+  .home .capti--links__info {
+    position: absolute;
+    top: -80px;
+    left: calc(50% + 115px);
+    z-index: 2;
+    font-weight: 400;
+    color: #555;
+    text-indent: -30px; }
+    @media (max-width: 1200px) {
+      .home .capti--links__info {
+        left: calc(50% + 95px); } }
+    @media (max-width: 992px) {
+      .home .capti--links__info {
+        left: calc(50% + 75px); } }
+    @media (max-width: 600px) {
+      .home .capti--links__info {
+        left: auto;
+        top: auto;
+        position: relative;
+        text-indent: 0;
+        text-align: center;
+        margin-bottom: 30px; } }
+    .home .capti--links__info-arrow {
+      display: inline-block;
+      vertical-align: top;
+      height: 24px;
+      width: 17px;
+      margin-left: 10px;
+      opacity: .5;
+      -ms-transform: rotate(90deg) scale(0.75);
+          transform: rotate(90deg) scale(0.75); }
+      .home .capti--links__info-arrow path {
+        fill: #333;
+        transition: fill .3s ease; }
   .home .capti--links__list {
     position: relative;
     max-width: 1300px;
@@ -994,7 +1051,7 @@
         .home .capti--links__list a:hover .capti--icon, .home .capti--links__list a:focus .capti--icon {
           filter: brightness(1.4); }
         .home .capti--links__list a:hover .capti--links__arrow, .home .capti--links__list a:focus .capti--links__arrow {
-          width: 186px;
+          width: 218px;
           text-indent: 0;
           border-color: #fff;
           color: #fff; }
@@ -1027,7 +1084,7 @@
     border: 2px solid transparent;
     padding: 10px 30px;
     overflow: hidden;
-    text-indent: -112px;
+    text-indent: -142px;
     font-weight: 400;
     color: #2280c7;
     white-space: nowrap;
@@ -1250,11 +1307,14 @@
 .k12-admin .capti--slider {
   z-index: 2; }
   .k12-admin .capti--slider__slide {
-    background: url(../img/background/capti--k12__background.jpg) center -10vh no-repeat;
+    background: url(../img/background/capti--k12__background.jpg) center -5vh no-repeat;
     background-size: cover; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1600px) {
       .k12-admin .capti--slider__slide {
         background-position: center center; } }
+    @media (max-width: 600px) {
+      .k12-admin .capti--slider__slide {
+        background-position: left center; } }
   .k12-admin .capti--slider__overlay {
     height: 100%;
     width: 45%; }
@@ -1562,6 +1622,21 @@
   top: 250px; }
   .readers .capti--photo__fly-photo {
     background-image: url(../img/background/capti--readers__background-fly.jpg); }
+
+.readers .capti--photo__1 {
+  background-image: url(../img/background/capti--readers__background-row-1.jpg); }
+  @media (max-width: 767px) {
+    .readers .capti--photo__1 {
+      display: none; } }
+
+.readers .capti--photo__2 {
+  background-image: url(../img/background/capti--readers__background-row-2.jpg); }
+  @media (max-width: 767px) {
+    .readers .capti--photo__2 {
+      display: none; } }
+
+.readers .capti--photo__3 {
+  background-image: url(../img/background/capti--readers__background-row-3.jpg); }
 
 .readers .capti--call_to_action__text {
   width: auto; }

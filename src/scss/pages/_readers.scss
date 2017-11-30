@@ -108,6 +108,21 @@
 					background-image: url(../img/background/capti--readers__background-fly.jpg);
 				}
 			}
+			&__1 {
+				background-image: url(../img/background/capti--readers__background-row-1.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
+			}
+			&__2 {
+				background-image: url(../img/background/capti--readers__background-row-2.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
+			}
+			&__3 {
+				background-image: url(../img/background/capti--readers__background-row-3.jpg);
+			}
 
 		}
 
