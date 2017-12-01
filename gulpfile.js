@@ -11,9 +11,10 @@ var gulp = require('gulp'),
     packageData = require('./package.json');
 
 const { TelegramClient } = require('messaging-api-telegram');
-
 const client = TelegramClient.connect('505072985:AAH5JLuUioQJUj0p2BzTjXkHEtXnkegB6UI');
-
+const gitlog = require('gitlog');
+const options = { repo: __dirname, number: 1, fields: [ 'subject', 'authorName'] };
+ 
 var currentUrl = packageData.url, currentName = packageData.name;
 
 gulp.task('css', function () {
@@ -113,7 +114,9 @@ gulp.task('copy', function () {
 });
 
 gulp.task('notify', function(){
-    client.sendMessage('-252565154', 'Go to: '+currentUrl);
+    gitlog(options, function(error, commits) {
+        client.sendMessage('-252565154', 'You updated the project "<b>'+currentName+'</b>" \n Website: '+currentUrl+' \n Subject: '+commits[0].subject+' \n Author: '+commits[0].authorName, {parse_mode: 'html'});
+    });
 });
 
 gulp.task('build', ['svg', 'html', 'css']);

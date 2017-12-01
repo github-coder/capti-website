@@ -12,6 +12,7 @@
   "dependencies": {
     "bourbon": "^4.2.6",
     "browser-sync": "^2.11.2",
+    "gitlog": "^3.1.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.3.2",
