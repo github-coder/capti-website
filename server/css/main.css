@@ -927,8 +927,6 @@
   color: #444;
   margin-bottom: 20px;
   margin-top: -60px; }
-  .home .capti--slider__title strong {
-    font-weight: 500; }
   @media (max-width: 600px) {
     .home .capti--slider__title {
       font-size: 1.75rem; } }
@@ -1455,6 +1453,8 @@
     bottom: -22%;
     transform: translate3d(0, 80px, 0);
     animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s 1 forwards, opacity_device 0.7s linear 0.5s 1 forwards; }
+  .college-faculty .capti--slider__pretitle {
+    max-width: 330px; }
   .college-faculty .capti--slider__content {
     padding-left: 75%; }
     @media (max-width: 1200px) {
