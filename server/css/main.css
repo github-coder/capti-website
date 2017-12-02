@@ -426,17 +426,17 @@
         font-size: 15px;
         margin-right: 7px; }
 
-.capti--photo__row {
-  height: 450px; }
-  @media (max-width: 992px) {
-    .capti--photo__row {
-      height: 280px; } }
-  .capti--photo__row .col-sm-4 {
-    height: 100%;
-    overflow: hidden;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+.capti--photo__row:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.capti--photo__row [class*="col-md-"] {
+  padding: 0; }
+  .capti--photo__row [class*="col-md-"] img {
+    height: auto;
+    width: 100%;
+    vertical-align: top; }
 
 .capti--photo__fly {
   position: absolute;
@@ -685,7 +685,9 @@
     z-index: 2; }
   .capti--map span {
     display: block;
-    font-weight: 300; }
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 160%; }
   .capti--map #map {
     height: 100%;
     width: 100%;
@@ -1260,20 +1262,13 @@
   .teachers .capti--photo__fly-photo {
     background-image: url(../img/background/capti--teacher__background-fly.jpg); }
 
-.teachers .capti--photo__1 {
-  background-image: url(../img/background/capti--teacher__background-row-1.jpg); }
+@media (max-width: 767px) {
+  .teachers .capti--photo__2 {
+    display: none; } }
 
-.teachers .capti--photo__2 {
-  background-image: url(../img/background/capti--teacher__background-row-2.jpg); }
-  @media (max-width: 767px) {
-    .teachers .capti--photo__2 {
-      display: none; } }
-
-.teachers .capti--photo__3 {
-  background-image: url(../img/background/capti--teacher__background-row-3.jpg); }
-  @media (max-width: 767px) {
-    .teachers .capti--photo__3 {
-      display: none; } }
+@media (max-width: 992px) {
+  .teachers .capti--photo__3 {
+    display: none; } }
 
 .teachers .capti--call_to_action-top {
   padding: 130px 0 45px; }
@@ -1380,20 +1375,13 @@
   .k12-admin .capti--photo__fly-photo {
     background-image: url(../img/background/capti--k12__background-fly.jpg); }
 
-.k12-admin .capti--photo__1 {
-  background-image: url(../img/background/capti--teacher__background-row-1.jpg); }
-  @media (max-width: 767px) {
-    .k12-admin .capti--photo__1 {
-      display: none; } }
+@media (max-width: 767px) {
+  .k12-admin .capti--photo__1 {
+    display: none; } }
 
-.k12-admin .capti--photo__2 {
-  background-image: url(../img/background/capti--teacher__background-row-2.jpg); }
-  @media (max-width: 767px) {
-    .k12-admin .capti--photo__2 {
-      display: none; } }
-
-.k12-admin .capti--photo__3 {
-  background-image: url(../img/background/capti--teacher__background-row-3.jpg); }
+@media (max-width: 992px) {
+  .k12-admin .capti--photo__2 {
+    display: none; } }
 
 .k12-admin .capti--call_to_action-top {
   padding: 130px 0 45px;
@@ -1487,14 +1475,13 @@
   .collage-faculty .capti--photo__fly-photo {
     background-image: url(../img/background/capti--collage__background-fly.jpg); }
 
-.collage-faculty .capti--photo__1 {
-  background-image: url(../img/background/capti--collage__background-row-1.jpg); }
+@media (max-width: 992px) {
+  .collage-faculty .capti--photo__1 {
+    display: none; } }
 
-.collage-faculty .capti--photo__2 {
-  background-image: url(../img/background/capti--collage__background-row-2.jpg); }
-
-.collage-faculty .capti--photo__3 {
-  background-image: url(../img/background/capti--collage__background-row-3.jpg); }
+@media (max-width: 767px) {
+  .collage-faculty .capti--photo__3 {
+    display: none; } }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .collage-faculty .capti--video .col-sm-4:nth-of-type(3) .howitwork-title {
@@ -1627,20 +1614,13 @@
   .readers .capti--photo__fly-photo {
     background-image: url(../img/background/capti--readers__background-fly.jpg); }
 
-.readers .capti--photo__1 {
-  background-image: url(../img/background/capti--readers__background-row-1.jpg); }
-  @media (max-width: 767px) {
-    .readers .capti--photo__1 {
-      display: none; } }
+@media (max-width: 992px) {
+  .readers .capti--photo__1 {
+    display: none; } }
 
-.readers .capti--photo__2 {
-  background-image: url(../img/background/capti--readers__background-row-2.jpg); }
-  @media (max-width: 767px) {
-    .readers .capti--photo__2 {
-      display: none; } }
-
-.readers .capti--photo__3 {
-  background-image: url(../img/background/capti--readers__background-row-3.jpg); }
+@media (max-width: 767px) {
+  .readers .capti--photo__3 {
+    display: none; } }
 
 .readers .capti--call_to_action__text {
   width: auto; }

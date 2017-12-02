@@ -72,15 +72,15 @@
 					background-image: url(../img/background/capti--collage__background-fly.jpg);
 				}
 			}
-
 			&__1 {
-				background-image: url(../img/background/capti--collage__background-row-1.jpg);
-			}
-			&__2 {
-				background-image: url(../img/background/capti--collage__background-row-2.jpg);
+				@media(max-width: 992px) {
+					display: none;
+				}
 			}
 			&__3 {
-				background-image: url(../img/background/capti--collage__background-row-3.jpg);
+				@media(max-width: 767px) {
+					display: none;
+				}
 			}
 		}
 

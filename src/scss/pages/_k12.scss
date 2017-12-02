@@ -91,19 +91,14 @@
 			}
 
 			&__1 {
-				background-image: url(../img/background/capti--teacher__background-row-1.jpg);
 				@media(max-width: 767px) {
 					display: none;
 				}
 			}
 			&__2 {
-				background-image: url(../img/background/capti--teacher__background-row-2.jpg);
-				@media(max-width: 767px) {
+				@media(max-width: 992px) {
 					display: none;
 				}
-			}
-			&__3 {
-				background-image: url(../img/background/capti--teacher__background-row-3.jpg);
 			}
 		}
 

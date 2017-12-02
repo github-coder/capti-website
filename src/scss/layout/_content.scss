@@ -381,16 +381,17 @@
 
 	&--photo {
 		&__row {
-			height: 450px;
-			@media(max-width: 992px) {
-				height: 280px;
+			&:after {
+				content: '';
+				display: table;
+				clear: both;
 			}
-			.col-sm-4 {
-				height: 100%;
-				overflow: hidden;
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-size: cover;
+			[class*="col-md-"] {
+				padding: 0;
+				img {
+					@include size(100% auto);
+					vertical-align: top;
+				}
 			}
 		}
 		&__fly {
@@ -654,7 +655,9 @@
 		}
 		span {
 			display: block;
+			font-size: 1.5rem;
 			font-weight: 300;
+			line-height: 160%;
 		}
 
 		#map {
