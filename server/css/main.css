@@ -1,4 +1,4 @@
-.capti--icon-1:before, .capti--icon-2:before, .capti--icon-3:before, .capti--icon-4:before, .home .capti--learn__link .capti--icon-1:before, .home .capti--learn__link .capti--icon-2:before, .home .capti--learn__link .capti--icon-3:before, .home .capti--learn__link .capti--icon-4:before, .teachers .capti--icon-1:before, .k12-admin .capti--icon-1:before, .collage-faculty .capti--icon-1:before, .readers .capti--icon-1:before {
+.capti--icon-1:before, .capti--icon-2:before, .capti--icon-3:before, .capti--icon-4:before, .home .capti--learn__link .capti--icon-1:before, .home .capti--learn__link .capti--icon-2:before, .home .capti--learn__link .capti--icon-3:before, .home .capti--learn__link .capti--icon-4:before, .teachers .capti--icon-1:before, .k12-admin .capti--icon-1:before, .college-faculty .capti--icon-1:before, .readers .capti--icon-1:before {
   display: inline-block;
   background-image: url("/img/sprite.svg");
   background-size: 55.5em 50.75em; }
@@ -1420,107 +1420,107 @@
     font-size: 24px;
     vertical-align: top; }
 
-.collage-faculty .capti--slider {
+.college-faculty .capti--slider {
   z-index: 2; }
-  .collage-faculty .capti--slider__slide {
-    background: url(../img/background/capti--collage__background.jpg) center top no-repeat;
+  .college-faculty .capti--slider__slide {
+    background: url(../img/background/capti--college__background.jpg) center top no-repeat;
     background-size: cover; }
     @media (max-width: 1200px) {
-      .collage-faculty .capti--slider__slide {
+      .college-faculty .capti--slider__slide {
         background-position: center center; } }
-  .collage-faculty .capti--slider__overlay {
+  .college-faculty .capti--slider__overlay {
     height: 100%;
     width: 45%; }
-    .collage-faculty .capti--slider__overlay-svg {
+    .college-faculty .capti--slider__overlay-svg {
       left: 25%;
       width: 140%; }
       @media (max-width: 1200px) {
-        .collage-faculty .capti--slider__overlay-svg {
+        .college-faculty .capti--slider__overlay-svg {
           left: 0; } }
-    .collage-faculty .capti--slider__overlay polygon {
+    .college-faculty .capti--slider__overlay polygon {
       fill: #fff;
       opacity: .8; }
-  .collage-faculty .capti--slider .container {
+  .college-faculty .capti--slider .container {
     max-width: none;
     width: auto; }
-  .collage-faculty .capti--slider__devices-laptop {
+  .college-faculty .capti--slider__devices-laptop {
     right: -12%;
     bottom: -20%;
     transform: translate3d(0, 80px, 0);
     animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s 1 forwards, opacity_device 0.7s linear 0.2s 1 forwards; }
-  .collage-faculty .capti--slider__devices-iphone {
+  .college-faculty .capti--slider__devices-iphone {
     right: -3%;
     bottom: -22%;
     transform: translate3d(0, 80px, 0);
     animation: run_device 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s 1 forwards, opacity_device 0.7s linear 0.5s 1 forwards; }
-  .collage-faculty .capti--slider__content {
+  .college-faculty .capti--slider__content {
     padding-left: 75%; }
     @media (max-width: 1200px) {
-      .collage-faculty .capti--slider__content {
+      .college-faculty .capti--slider__content {
         padding-left: 65%; } }
     @media (max-width: 600px) {
-      .collage-faculty .capti--slider__content {
+      .college-faculty .capti--slider__content {
         padding-left: 0;
         margin-top: -100px; } }
 
-.collage-faculty .capti--icon {
+.college-faculty .capti--icon {
   margin: 0 0 7px; }
-  .collage-faculty .capti--icon-1:before {
+  .college-faculty .capti--icon-1:before {
     width: 3.8125em;
     height: 3.8125em;
     background-position: -4.6875em -4.6875em; }
 
-.collage-faculty .capti--photo__fly {
+.college-faculty .capti--photo__fly {
   top: 200px; }
-  .collage-faculty .capti--photo__fly-photo {
-    background-image: url(../img/background/capti--collage__background-fly.jpg); }
+  .college-faculty .capti--photo__fly-photo {
+    background-image: url(../img/background/capti--college__background-fly.jpg); }
 
 @media (max-width: 992px) {
-  .collage-faculty .capti--photo__1 {
+  .college-faculty .capti--photo__1 {
     display: none; } }
 
 @media (max-width: 767px) {
-  .collage-faculty .capti--photo__3 {
+  .college-faculty .capti--photo__3 {
     display: none; } }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .collage-faculty .capti--video .col-sm-4:nth-of-type(3) .howitwork-title {
+  .college-faculty .capti--video .col-sm-4:nth-of-type(3) .howitwork-title {
     margin-bottom: 42px; } }
 
-.collage-faculty .capti--call_to_action-top {
+.college-faculty .capti--call_to_action-top {
   padding: 110px 0 45px;
   overflow: visible; }
   @media (max-width: 600px) {
-    .collage-faculty .capti--call_to_action-top {
+    .college-faculty .capti--call_to_action-top {
       padding: 30px 0; } }
-  .collage-faculty .capti--call_to_action-top:before {
+  .college-faculty .capti--call_to_action-top:before {
     background-position: center top; }
     @media (max-width: 992px) {
-      .collage-faculty .capti--call_to_action-top:before {
+      .college-faculty .capti--call_to_action-top:before {
         background-size: auto 150px; } }
-  .collage-faculty .capti--call_to_action-top .capti--call_to_action__container {
+  .college-faculty .capti--call_to_action-top .capti--call_to_action__container {
     display: block; }
-  .collage-faculty .capti--call_to_action-top .capti--call_to_action__text {
+  .college-faculty .capti--call_to_action-top .capti--call_to_action__text {
     max-width: 850px;
     width: 100%;
     margin: 0 auto 40px;
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 160%; }
-  .collage-faculty .capti--call_to_action-top .capti--call_to_action__buttons {
+  .college-faculty .capti--call_to_action-top .capti--call_to_action__buttons {
     max-width: 850px;
     margin: 0 auto;
     text-align: left;
     white-space: normal; }
-    .collage-faculty .capti--call_to_action-top .capti--call_to_action__buttons hr {
+    .college-faculty .capti--call_to_action-top .capti--call_to_action__buttons hr {
       opacity: .3; }
-    .collage-faculty .capti--call_to_action-top .capti--call_to_action__buttons p {
+    .college-faculty .capti--call_to_action-top .capti--call_to_action__buttons p {
       font-size: 1.375rem;
       font-weight: bold;
       line-height: 120%;
       color: #fff;
       margin-bottom: 30px; }
-  .collage-faculty .capti--call_to_action-top .capti--call_to_action__getquote i {
+  .college-faculty .capti--call_to_action-top .capti--call_to_action__getquote i {
     font-size: 24px;
     vertical-align: top; }
 

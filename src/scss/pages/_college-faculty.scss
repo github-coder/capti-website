@@ -1,9 +1,9 @@
-.collage-faculty {
+.college-faculty {
 	.capti {
 		&--slider {
 			z-index: 2;
 			&__slide {
-				background: url(../img/background/capti--collage__background.jpg) center top no-repeat;
+				background: url(../img/background/capti--college__background.jpg) center top no-repeat;
 				background-size: cover;
 				@media(max-width: 1200px) {
 					background-position: center center;
@@ -60,7 +60,7 @@
 			margin: 0 0 7px;
 			&-1 {
 				&:before {
-					@include sprite(collage_dark);
+					@include sprite(college_dark);
 				}
 			}
 		}
@@ -69,7 +69,7 @@
 			&__fly {
 				top: 200px;
 				&-photo {
-					background-image: url(../img/background/capti--collage__background-fly.jpg);
+					background-image: url(../img/background/capti--college__background-fly.jpg);
 				}
 			}
 			&__1 {
