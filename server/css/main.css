@@ -920,12 +920,12 @@
       text-align: center; } }
 
 .home .capti--slider__title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 135%;
   text-transform: none;
   color: #444;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: -60px; }
   .home .capti--slider__title strong {
     font-weight: 500; }
@@ -970,11 +970,12 @@
   .home .capti--links__info {
     position: absolute;
     top: -80px;
-    left: calc(50% + 115px);
+    left: calc(50% + 110px);
     z-index: 2;
     font-weight: 400;
-    color: #555;
-    text-indent: -30px; }
+    color: #333;
+    text-indent: -30px;
+    font-size: 1.1rem; }
     @media (max-width: 1200px) {
       .home .capti--links__info {
         left: calc(50% + 95px); } }
@@ -995,7 +996,8 @@
       height: 24px;
       width: 17px;
       margin-left: 10px;
-      opacity: .5;
+      margin-right: 3px;
+      opacity: .7;
       -ms-transform: rotate(90deg) scale(0.75);
           transform: rotate(90deg) scale(0.75); }
       .home .capti--links__info-arrow path {
