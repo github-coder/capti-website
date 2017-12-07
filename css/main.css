@@ -146,7 +146,8 @@
         align-items: center; }
     @media (max-width: 600px) {
       .capti--slider .container {
-        display: block; } }
+        display: block;
+        height: auto; } }
   .capti--slider__devices {
     position: absolute;
     top: 0;
